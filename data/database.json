@@ -1,0 +1,66 @@
+{
+  "purchase_orders": {
+    "PO-78910": {
+      "vendor": "Tech Solutions Inc.",
+      "approved_amount": 13625.82,
+      "valid_items": [
+        "Cloud Storage Subscription",
+        "API Access License"
+      ],
+      "max_quantity": {
+        "Cloud Storage Subscription": 10,
+        "API Access License": 2
+      },
+      "tax_rate": 0.09
+    },
+    "PO-45678": {
+      "vendor": "Acme Data Services LLC",
+      "approved_amount": 8175.0,
+      "valid_items": [
+        "Data Pipeline Setup",
+        "Support Retainer"
+      ],
+      "max_quantity": {
+        "Data Pipeline Setup": 2,
+        "Support Retainer": 3
+      },
+      "tax_rate": 0.09
+    },
+    "PO-11223": {
+      "vendor": "Northwind Analytics Co.",
+      "approved_amount": 6104.0,
+      "valid_items": [
+        "Dashboard License",
+        "Onsite Training"
+      ],
+      "max_quantity": {
+        "Dashboard License": 5,
+        "Onsite Training": 1
+      },
+      "tax_rate": 0.09
+    }
+  },
+  "vendor_master": {
+    "Tech Solutions Inc.": {
+      "legal_name": "Tech Solutions Incorporated",
+      "address": "123 Innovation Drive, San Francisco, CA 94107",
+      "tax_id": "12-3456789"
+    },
+    "Acme Data Services LLC": {
+      "legal_name": "Acme Data Services LLC",
+      "address": "900 Market Street, San Jose, CA 95113",
+      "tax_id": "98-7654321"
+    },
+    "Northwind Analytics Co.": {
+      "legal_name": "Northwind Analytics Company",
+      "address": "77 Lakeview Ave, Chicago, IL 60601",
+      "tax_id": "55-7788990"
+    }
+  },
+  "customer_info": {
+    "Suri Technologies": {
+      "legal_name": "Suri Technologies LLC",
+      "billing_address": "456 Data Street, Austin, TX 78701"
+    }
+  }
+}

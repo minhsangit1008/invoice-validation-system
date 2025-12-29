@@ -1,0 +1,148 @@
+{
+  "INV-2024-001": {
+    "raw_text": "SIMULATED OCR TEXT FOR INV-2024-001",
+    "structured_data": {
+      "vendor_name": "Tech Solutions Inc",
+      "vendor_address": "123 Innovation Dr, San Francisco, CA 94107",
+      "customer_name": "Suri Tech",
+      "customer_address": "456 Data Street, Austin, TX 78701",
+      "po_number": "P0-78910",
+      "invoice_date": "2024-01-15",
+      "due_date": "2024-02-15",
+      "subtotal": 12500.75,
+      "tax_amount": 1125.7,
+      "total_amount": 13625.82,
+      "line_items": [
+        {
+          "text": "Cloud Storage Subscription\nQty: 5\nPrice: $2,000.00\nTotal: $10,000.00"
+        },
+        {
+          "text": "API Access License\nQty: 1\nPrice: $2,500.75\nTotal: $2,500.75"
+        }
+      ]
+    },
+    "confidence_scores": {
+      "vendor_name": 0.92,
+      "po_number": 0.85,
+      "total_amount": 0.98,
+      "tax_amount": 0.8,
+      "due_date": 0.83
+    },
+    "bounding_boxes": {
+      "vendor_name": {
+        "x1": 100,
+        "y1": 150,
+        "x2": 320,
+        "y2": 170
+      },
+      "po_number": {
+        "x1": 400,
+        "y1": 120,
+        "x2": 520,
+        "y2": 140
+      },
+      "tax_amount": {
+        "x1": 420,
+        "y1": 620,
+        "x2": 520,
+        "y2": 640
+      },
+      "total_amount": {
+        "x1": 420,
+        "y1": 660,
+        "x2": 520,
+        "y2": 680
+      }
+    }
+  },
+  "INV-2024-002": {
+    "raw_text": "SIMULATED OCR TEXT FOR INV-2024-002",
+    "structured_data": {
+      "vendor_name": "ACME Data Services LLC",
+      "vendor_address": "900 Market St, San Jose, CA 95113",
+      "customer_name": "Suri Technologies",
+      "customer_address": "",
+      "po_number": "PO-4567B",
+      "invoice_date": "2024-02-02",
+      "due_date": "2024-03-03",
+      "subtotal": 7500.0,
+      "tax_amount": 675.0,
+      "total_amount": 8175.0,
+      "line_items": [
+        {
+          "text": "Data Pipeline Setup\nQty: 1\nPrice: $4,500.00\nTotal: $4,500.00"
+        },
+        {
+          "text": "Support Retainer\nQty: 5\nPrice: $1,500.00\nTotal: $7,500.00"
+        }
+      ]
+    },
+    "confidence_scores": {
+      "vendor_name": 0.9,
+      "po_number": 0.78,
+      "total_amount": 0.97
+    },
+    "bounding_boxes": {
+      "vendor_name": {
+        "x1": 110,
+        "y1": 140,
+        "x2": 350,
+        "y2": 160
+      },
+      "po_number": {
+        "x1": 410,
+        "y1": 118,
+        "x2": 520,
+        "y2": 138
+      }
+    }
+  },
+  "INV-2024-003": {
+    "raw_text": "SIMULATED OCR TEXT FOR INV-2024-003",
+    "structured_data": {
+      "vendor_name": "Northwind Analytics Co",
+      "vendor_address": "",
+      "customer_name": "Suri Technologies",
+      "customer_address": "456 Data Street, Austin, TX 78701",
+      "po_number": "PO-11223",
+      "invoice_date": "2024-02-20",
+      "due_date": "2024-03-22",
+      "subtotal": 5600.0,
+      "tax_amount": 504.0,
+      "total_amount": 6104.0,
+      "line_items": [
+        {
+          "text": "Dashboard License\nQty: 3\nPrice: $1,200.00\nTotal: $3,600.00"
+        },
+        {
+          "text": "Onsite Training\nQty: 1\nPrice: $2,000.00\nTotal: $2,000.00"
+        }
+      ]
+    },
+    "confidence_scores": {
+      "vendor_name": 0.88,
+      "po_number": 0.96,
+      "due_date": 0.82
+    },
+    "bounding_boxes": {
+      "vendor_name": {
+        "x1": 120,
+        "y1": 150,
+        "x2": 340,
+        "y2": 170
+      },
+      "po_number": {
+        "x1": 405,
+        "y1": 120,
+        "x2": 520,
+        "y2": 140
+      },
+      "due_date": {
+        "x1": 420,
+        "y1": 220,
+        "x2": 520,
+        "y2": 240
+      }
+    }
+  }
+}
