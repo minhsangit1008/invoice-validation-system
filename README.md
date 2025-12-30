@@ -34,7 +34,7 @@ python -m pip install notebook
 jupyter notebook
 ```
 
-## Option A (Logistic Regression)
+## Logistic Regression
 
 Train a lightweight model on the sample data:
 
@@ -44,3 +44,25 @@ python .\scripts\train_model.py
 
 This writes `models/logreg.pkl`, which can be passed into `validate_invoice`
 via the `model_bundle` argument (see `src/ml/train.py` and `src/ml/predict.py`).
+
+## Demo and Sample Outputs
+
+Run a demo over all invoices (prints to console):
+
+```powershell
+python .\scripts\run_demo.py
+```
+
+Generate sample output JSON files (validation + discrepancies + visualization):
+
+```powershell
+python .\scripts\generate_sample_outputs.py
+```
+
+Outputs are saved under `sample_outputs/`.
+
+## Design Doc Export (DOCX)
+
+```powershell
+python .\scripts\export_design_docx.py
+```

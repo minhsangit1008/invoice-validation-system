@@ -36,19 +36,17 @@ Day 2 (2025-12-31) - Quality, docs, demo
 10:00-12:00 | Status tracking + correction logging [DONE]
 - src/tracking/status.py (init, log_correction, transition_status)
 
-13:00-15:00 | Notebook + sample outputs (3 invoices) [TODO]
+13:00-15:00 | Notebook + sample outputs (3 invoices) [DONE]
 - Add notebook section: analysis/challenges/metrics
 - Generate sample outputs JSON (validation + discrepancies + visualization coords)
 
-15:00-16:15 | Design Doc (DESIGN.md/PDF) [TODO]
+15:00-16:15 | Design Doc (DESIGN.md/PDF) [DONE]
 - Approach/methodology, assumptions/limitations
 - Scalability + recommendations (feedback loop, monitoring, privacy)
 
-16:15-17:00 | Hardening + packaging [PARTIAL]
+16:15-17:00 | Hardening + packaging [DONE]
 - pytest passes
-- README has setup + Option A
-- TODO: add run_demo and sample output steps to README
-- TODO: ensure sample_outputs/ directory exists
+- README has setup + Option A + demo/sample outputs
 
 Option A (Logistic Regression) [DONE]
 - src/ml/features.py, train.py, predict.py
@@ -60,8 +58,6 @@ Current key scripts
 - scripts/run_demo.py (validate 3 invoices, print results)
 
 Recommended next steps (order)
-1) Add scripts/generate_sample_outputs.py to write JSON outputs to sample_outputs/
-2) Expand tests to 8-12 cases (date invalid, tax small diff, abbreviation)
-3) Extend data_overview.ipynb with analysis/metrics section
-4) Write DESIGN.md
-5) Update README with run_demo + sample_outputs instructions
+1) Run scripts/generate_sample_outputs.py to produce sample_outputs/*.json
+2) Re-run data_overview.ipynb to populate the new metrics section
+3) Review DESIGN.md and adjust wording if needed

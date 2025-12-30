@@ -1,5 +1,5 @@
 import re
-from datetime import datetime
+from datetime import date, datetime
 from dateutil import parser as date_parser
 
 from src.config import ADDRESS_ABBREV_MAP, COMPANY_SUFFIX_MAP, CONFUSABLE_MAP
@@ -55,13 +55,46 @@ def parse_amount(value):
         return None
     if isinstance(value, (int, float)):
         return float(value)
-    text = str(value)
-    text = text.replace(",", "")
-    text = re.sub(r"[^0-9.\-]", "", text)
+    text = str(value).strip()
     if text == "":
         return None
+    negative = False
+    if text.startswith("(") and text.endswith(")"):
+        negative = True
+        text = text[1:-1]
+    text = text.replace(" ", "")
+    text = re.sub(r"[^0-9,.\-]", "", text)
+    if text in ("", "-", ".", ","):
+        return None
+
+    if text.startswith("-"):
+        negative = True
+        text = text[1:]
+
+    if "," in text and "." in text:
+        last_comma = text.rfind(",")
+        last_dot = text.rfind(".")
+        if last_comma > last_dot:
+            text = text.replace(".", "")
+            text = text.replace(",", ".")
+        else:
+            text = text.replace(",", "")
+    elif "," in text:
+        if re.search(r",\d{2}$", text):
+            text = text.replace(".", "")
+            text = text.replace(",", ".")
+        else:
+            text = text.replace(",", "")
+    elif "." in text:
+        if text.count(".") > 1:
+            text = text.replace(".", "")
+        elif re.search(r"\.\d{2}$", text):
+            pass
+        elif re.search(r"\.\d{3}$", text) and len(text.split(".")[0]) <= 3:
+            text = text.replace(".", "")
     try:
-        return float(text)
+        val = float(text)
+        return -val if negative else val
     except ValueError:
         return None
 
@@ -69,12 +102,49 @@ def parse_amount(value):
 def parse_date(value):
     if value is None:
         return None
+    if isinstance(value, date) and not isinstance(value, datetime):
+        return value
     if isinstance(value, datetime):
         return value.date()
-    try:
-        return date_parser.parse(str(value), dayfirst=False).date()
-    except (ValueError, TypeError):
+    text = str(value).strip()
+    if text == "":
         return None
+
+    if re.fullmatch(r"\d{8}", text):
+        year = int(text[:4])
+        if year >= 1900:
+            try:
+                return datetime.strptime(text, "%Y%m%d").date()
+            except ValueError:
+                pass
+        try:
+            return datetime.strptime(text, "%d%m%Y").date()
+        except ValueError:
+            return None
+
+    for fmt in (
+        "%Y-%m-%d",
+        "%Y/%m/%d",
+        "%d/%m/%Y",
+        "%m/%d/%Y",
+        "%d-%m-%Y",
+        "%m-%d-%Y",
+        "%d.%m.%Y",
+        "%Y.%m.%d",
+    ):
+        try:
+            return datetime.strptime(text, fmt).date()
+        except ValueError:
+            continue
+
+    for dayfirst in (False, True):
+        try:
+            return date_parser.parse(
+                text, dayfirst=dayfirst, yearfirst=True, fuzzy=True
+            ).date()
+        except (ValueError, TypeError):
+            continue
+    return None
 
 
 def safe_int(value):

@@ -4,3 +4,4 @@ scikit-learn
 rapidfuzz
 python-dateutil
 pytest
+matplotlib

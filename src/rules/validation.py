@@ -36,7 +36,12 @@ def validate_invoice(ocr_data, ground_truth, database, model_bundle=None):
     bboxes = ocr_data.get("bounding_boxes", {})
 
     discrepancies = []
-    details = {"fuzzy_scores": {}, "amount_diffs": {}, "date_diffs": {}}
+    details = {
+        "fuzzy_scores": {},
+        "amount_diffs": {},
+        "date_diffs": {},
+        "reference_used": {},
+    }
 
     _check_id_field(
         "po_number",
@@ -47,9 +52,39 @@ def validate_invoice(ocr_data, ground_truth, database, model_bundle=None):
         discrepancies,
     )
 
+    po_number = structured.get("po_number") or expected.get("po_number")
+    po_record = database.get("purchase_orders", {}).get(po_number, {})
+    if not po_record and structured.get("po_number"):
+        norm_po = ocr_confusion_normalize(structured.get("po_number"))
+        for key, rec in database.get("purchase_orders", {}).items():
+            if ocr_confusion_normalize(key) == norm_po:
+                po_record = rec
+                break
+
+    expected_vendor_name = expected.get("vendor_name")
+    expected_vendor_address = expected.get("vendor_address")
+    expected_customer_name = expected.get("customer_name")
+    expected_customer_address = expected.get("customer_address")
+
+    if po_record and po_record.get("vendor"):
+        expected_vendor_name = po_record.get("vendor")
+        details["reference_used"]["vendor_name"] = "purchase_orders.vendor"
+
+    vendor_master = database.get("vendor_master", {})
+    vendor_ref = vendor_master.get(expected_vendor_name)
+    if vendor_ref and vendor_ref.get("address"):
+        expected_vendor_address = vendor_ref.get("address")
+        details["reference_used"]["vendor_address"] = "vendor_master.address"
+
+    customer_info = database.get("customer_info", {})
+    customer_ref = customer_info.get(expected_customer_name)
+    if customer_ref and customer_ref.get("billing_address"):
+        expected_customer_address = customer_ref.get("billing_address")
+        details["reference_used"]["customer_address"] = "customer_info.billing_address"
+
     _check_fuzzy_field(
         "vendor_name",
-        expected.get("vendor_name"),
+        expected_vendor_name,
         structured.get("vendor_name"),
         ocr_conf.get("vendor_name"),
         bboxes,
@@ -63,7 +98,7 @@ def validate_invoice(ocr_data, ground_truth, database, model_bundle=None):
 
     _check_fuzzy_field(
         "customer_name",
-        expected.get("customer_name"),
+        expected_customer_name,
         structured.get("customer_name"),
         ocr_conf.get("customer_name"),
         bboxes,
@@ -77,7 +112,7 @@ def validate_invoice(ocr_data, ground_truth, database, model_bundle=None):
 
     _check_fuzzy_field(
         "vendor_address",
-        expected.get("vendor_address"),
+        expected_vendor_address,
         structured.get("vendor_address"),
         ocr_conf.get("vendor_address"),
         bboxes,
@@ -91,7 +126,7 @@ def validate_invoice(ocr_data, ground_truth, database, model_bundle=None):
 
     _check_fuzzy_field(
         "customer_address",
-        expected.get("customer_address"),
+        expected_customer_address,
         structured.get("customer_address"),
         ocr_conf.get("customer_address"),
         bboxes,
@@ -153,14 +188,15 @@ def validate_invoice(ocr_data, ground_truth, database, model_bundle=None):
         details["amount_diffs"],
     )
 
-    po_number = structured.get("po_number") or expected.get("po_number")
-    po_record = database.get("purchase_orders", {}).get(po_number, {})
-    if not po_record and structured.get("po_number"):
-        norm_po = ocr_confusion_normalize(structured.get("po_number"))
-        for key, rec in database.get("purchase_orders", {}).items():
-            if ocr_confusion_normalize(key) == norm_po:
-                po_record = rec
-                break
+    _check_tax_rate(
+        structured.get("subtotal") or expected.get("subtotal"),
+        structured.get("tax_amount"),
+        po_record,
+        ocr_conf.get("tax_amount"),
+        bboxes,
+        discrepancies,
+        details,
+    )
     line_discrepancies, parsed_items = validate_line_items(
         structured.get("line_items"),
         expected.get("line_items"),
@@ -429,3 +465,60 @@ def _decide_status(discrepancies, confidence_score):
     if has_warning or confidence_score < CONFIDENCE_REVIEW_THRESHOLD:
         return "needs_review"
     return "approved"
+
+
+def _check_tax_rate(subtotal, tax_amount, po_record, conf, bboxes, discrepancies, details):
+    if not po_record:
+        return
+    tax_rate = po_record.get("tax_rate")
+    if tax_rate is None:
+        return
+    exp_subtotal = parse_amount(subtotal)
+    det_tax = parse_amount(tax_amount)
+    if exp_subtotal is None or det_tax is None:
+        return
+
+    expected_tax = exp_subtotal * float(tax_rate)
+    details["tax_rate_check"] = {
+        "tax_rate": tax_rate,
+        "expected_tax": round(expected_tax, 4),
+    }
+
+    if _has_discrepancy(discrepancies, "tax_amount"):
+        return
+
+    diff = abs(expected_tax - det_tax)
+    rel = diff / expected_tax if expected_tax else diff
+    if diff <= AMOUNT_ABS_PASS or rel <= AMOUNT_REL_PASS:
+        return
+    if diff <= AMOUNT_ABS_WARN or rel <= AMOUNT_REL_WARN:
+        discrepancies.append(
+            build_discrepancy(
+                "tax_amount",
+                "warning",
+                round(expected_tax, 2),
+                det_tax,
+                conf or 0.7,
+                "Tax amount deviates from PO tax_rate",
+                bboxes.get("tax_amount"),
+            )
+        )
+        return
+    discrepancies.append(
+        build_discrepancy(
+            "tax_amount",
+            "critical",
+            round(expected_tax, 2),
+            det_tax,
+            conf or 0.7,
+            "Tax amount mismatch vs PO tax_rate",
+            bboxes.get("tax_amount"),
+        )
+    )
+
+
+def _has_discrepancy(discrepancies, field):
+    for d in discrepancies:
+        if d.get("field") == field:
+            return True
+    return False
