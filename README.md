@@ -43,8 +43,3 @@ python .\scripts\generate_sample_outputs.py
 ```
 
 Outputs are saved under `sample_outputs/`.
-
-## Design Document
-
-- `Design Document.docx`
-- `DESIGN.md`
