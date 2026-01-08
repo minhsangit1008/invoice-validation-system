@@ -1,4 +1,5 @@
 from pathlib import Path
+import shutil
 
 FUZZY_PASS = 0.90
 FUZZY_WARN = 0.80
@@ -88,7 +89,12 @@ RENDERED_DIR = DATA_DIR / "rendered_pages"
 OCR_RAW_PATH = ROOT_DIR / "outputs" / "ocr_raw.json"
 
 _DEFAULT_TESSERACT = Path(r"C:\Program Files\Tesseract-OCR\tesseract.exe")
-TESSERACT_CMD = _DEFAULT_TESSERACT if _DEFAULT_TESSERACT.exists() else None
+_AUTO_TESSERACT = shutil.which("tesseract")
+TESSERACT_CMD = (
+    Path(_AUTO_TESSERACT)
+    if _AUTO_TESSERACT
+    else (_DEFAULT_TESSERACT if _DEFAULT_TESSERACT.exists() else None)
+)
 TESSDATA_DIR = DATA_DIR / "tessdata"
 OCR_DPI = 300
 OCR_LANGS = "eng+vie"

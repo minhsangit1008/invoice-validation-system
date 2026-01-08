@@ -9,6 +9,7 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 from PIL import Image, ImageOps
+import fitz
 import pytesseract
 
 from src.preprocess.normalize import (
@@ -106,6 +107,177 @@ def _resolve_langs():
         if not tess_vie or not tess_vie.exists():
             langs = "eng"
     return langs
+
+
+def _tess_config():
+    return "--oem 3 --psm 6 -c preserve_interword_spaces=1"
+
+
+def _pdf_text_lines(doc, page_index, target_width=None, target_height=None):
+    if doc is None or page_index >= len(doc):
+        return []
+    page = doc.load_page(page_index)
+    rect = page.rect
+    scale_x = (target_width / rect.width) if target_width else 1.0
+    scale_y = (target_height / rect.height) if target_height else 1.0
+    lines = []
+    blocks = page.get_text("dict").get("blocks", [])
+    for block in blocks:
+        for line in block.get("lines", []):
+            spans = line.get("spans", [])
+            if not spans:
+                continue
+            text = " ".join((s.get("text") or "").strip() for s in spans).strip()
+            if not text:
+                continue
+            x1 = min(s["bbox"][0] for s in spans)
+            y1 = min(s["bbox"][1] for s in spans)
+            x2 = max(s["bbox"][2] for s in spans)
+            y2 = max(s["bbox"][3] for s in spans)
+            lines.append(
+                {
+                    "text": text,
+                    "conf": 99.0,
+                    "x1": int(x1 * scale_x),
+                    "y1": int(y1 * scale_y),
+                    "x2": int(x2 * scale_x),
+                    "y2": int(y2 * scale_y),
+                }
+            )
+    return lines
+
+
+def _norm(text):
+    return normalize_text(text or "")
+
+
+def _find_pdf_label_line(pdf_lines, labels):
+    norm_labels = [_norm_label(label) for label in labels]
+    for line in pdf_lines:
+        if _norm_label(line["text"]) in norm_labels:
+            return line
+    return None
+
+
+def _extract_value_below_label(pdf_lines, labels, max_y_gap=120, max_dx=80, require_digits=False):
+    label_line = _find_pdf_label_line(pdf_lines, labels)
+    if not label_line:
+        return None, None
+    cx = (label_line["x1"] + label_line["x2"]) / 2
+    y_min = label_line["y2"]
+    norm_labels = {_norm_label(label) for label in labels}
+    candidates = []
+    for line in pdf_lines:
+        if line is label_line:
+            continue
+        if line["y1"] < y_min:
+            continue
+        if line["y1"] - y_min > max_y_gap:
+            continue
+        line_cx = (line["x1"] + line["x2"]) / 2
+        if abs(line_cx - cx) > max_dx:
+            continue
+        norm_text = _norm_label(line["text"])
+        if norm_text in norm_labels:
+            continue
+        if require_digits and not any(ch.isdigit() for ch in line["text"]):
+            continue
+        candidates.append(line)
+    if not candidates:
+        return None, None
+    best = sorted(candidates, key=lambda l: (l["y1"], abs(((l["x1"] + l["x2"]) / 2) - cx)))[0]
+    return best["text"], _bbox_union([best])
+
+
+def _extract_column_block(pdf_lines, label, max_y_span=220, max_dx=150):
+    label_line = _find_pdf_label_line(pdf_lines, [label])
+    if not label_line:
+        return None, None, None
+    cx = (label_line["x1"] + label_line["x2"]) / 2
+    y_min = label_line["y2"]
+    y_max = y_min + max_y_span
+    candidates = [
+        l
+        for l in pdf_lines
+        if l is not label_line
+        and l["y1"] >= y_min
+        and l["y1"] <= y_max
+        and abs(((l["x1"] + l["x2"]) / 2) - cx) <= max_dx
+        and len(l["text"]) >= 2
+    ]
+    if not candidates:
+        return None, None, None
+    candidates = sorted(candidates, key=lambda l: (l["y1"], l["x1"]))
+    texts = [c["text"] for c in candidates]
+    if len(texts) >= 2 and any(ch.isdigit() for ch in texts[0]) and not any(
+        ch.isdigit() for ch in texts[1]
+    ):
+        name = texts[1]
+        address_parts = [texts[0]] + texts[2:4]
+    else:
+        name = texts[0]
+        address_parts = texts[1:3]
+    address = ", ".join(address_parts) if address_parts else None
+    bbox = _bbox_union(candidates[: len(address_parts) + 1])
+    return name, address, bbox
+
+
+def _extract_top_left_header(pdf_lines):
+    if not pdf_lines:
+        return None, None
+    # Pick first 4-6 lines in top-left quadrant as candidate name/address
+    sorted_lines = sorted(pdf_lines, key=lambda l: (l["y1"], l["x1"]))
+    top_lines = [l for l in sorted_lines if l["x1"] < 250 and l["y1"] < 320][:5]
+    if not top_lines:
+        return None, None
+    name_line = top_lines[0]["text"]
+    addr_parts = [l["text"] for l in top_lines[1:]]
+    address = ", ".join(addr_parts) if addr_parts else None
+    bbox = _bbox_union(top_lines)
+    return name_line, address, bbox
+
+
+def _extract_value_right_of_label(pdf_lines, labels, max_dx=220, max_y_gap=18, require_digits=False):
+    label_line = _find_pdf_label_line(pdf_lines, labels)
+    if not label_line:
+        return None, None
+    y1, y2 = label_line["y1"], label_line["y2"]
+    candidates = []
+    norm_labels = {_norm_label(label) for label in labels}
+    for line in pdf_lines:
+        if line is label_line:
+            continue
+        if line["y2"] < y1 - max_y_gap or line["y1"] > y2 + max_y_gap:
+            continue
+        if line["x1"] < label_line["x2"]:
+            continue
+        if line["x1"] - label_line["x2"] > max_dx:
+            continue
+        norm_text = _norm_label(line["text"])
+        if norm_text in norm_labels:
+            continue
+        if require_digits and not any(ch.isdigit() for ch in line["text"]):
+            continue
+        candidates.append(line)
+    if not candidates:
+        return None, None
+    best = sorted(
+        candidates,
+        key=lambda l: (abs(((l["y1"] + l["y2"]) / 2) - ((y1 + y2) / 2)), l["x1"]),
+    )[0]
+    return best["text"], _bbox_union([best])
+
+
+def _extract_amount_pdf(pdf_lines, labels, max_dx=320):
+    for label in labels:
+        raw, bbox = _extract_value_right_of_label(pdf_lines, [label], max_dx=max_dx)
+        if not raw:
+            continue
+        val = parse_amount(raw)
+        if val is None:
+            continue
+        return val, 0.99, bbox
+    return None, None, None
 
 
 def _bbox_union(lines):
@@ -358,7 +530,7 @@ def _ocr_lines_threshold(image_path, threshold=150):
         bw,
         lang=_resolve_langs(),
         output_type=pytesseract.Output.DICT,
-        config="--psm 6",
+        config=_tess_config(),
     )
     return _lines_from_tess_data(data, 1, 0, 0)
 
@@ -381,7 +553,7 @@ def _extract_amounts_from_totals_block(image_path, total_bbox):
         bw,
         lang=_resolve_langs(),
         output_type=pytesseract.Output.DICT,
-        config="--psm 6",
+        config=_tess_config(),
     )
     lines = _lines_from_tess_data(data, 1, x1, y1)
     sub_val, sub_conf, sub_bbox = _extract_amount(lines, _SUBTOTAL_LABELS)
@@ -462,7 +634,7 @@ def _extract_tax_from_crop(invoice_id, subtotal_bbox, total_bbox):
         crop,
         lang=_resolve_langs(),
         output_type=pytesseract.Output.DICT,
-        config="--psm 6",
+        config=_tess_config(),
     )
     lines = _lines_from_tess_data(data, scale, x1, y1)
     for line in lines:
@@ -811,15 +983,47 @@ def build_ocr_results():
     results = {}
 
     for inv_id, inv_data in raw.items():
+        pdf_path = ROOT_DIR / "data" / "raw_pdfs" / f"{inv_id}.pdf"
+        pdf_doc = fitz.open(pdf_path) if pdf_path.exists() else None
         pages = inv_data.get("pages", [])
         lines = []
         tokens = []
         page_width = None
+        page_heights = []
+        pdf_page_lines = []
         for page in pages:
             lines.extend(page.get("lines", []))
             tokens.extend(page.get("tokens", []))
             if page_width is None:
                 page_width = page.get("width")
+            page_heights.append(page.get("height"))
+        if pdf_doc:
+            for idx, height in enumerate(page_heights):
+                target_width = page_width
+                target_height = height
+                plines = _pdf_text_lines(pdf_doc, idx, target_width, target_height)
+                lines.extend(plines)
+                if idx == 0:
+                    pdf_page_lines = plines
+
+        po_number = None
+        po_conf = None
+        po_bbox = None
+        invoice_date = None
+        invoice_conf = None
+        invoice_bbox = None
+        due_date = None
+        due_conf = None
+        due_bbox = None
+        subtotal = None
+        subtotal_conf = None
+        subtotal_bbox = None
+        tax_amount = None
+        tax_conf = None
+        tax_bbox = None
+        total_amount = None
+        total_conf = None
+        total_bbox = None
 
         (
             vendor_name,
@@ -844,22 +1048,85 @@ def build_ocr_results():
             inline_labels=["sold to", "bill to", "billed to", "ship to", "to"],
             fallback_start=6,
         )
+        if pdf_page_lines and (customer_name is None or customer_address is None):
+            top_name, top_addr, top_bbox = _extract_top_left_header(pdf_page_lines)
+            if top_name:
+                customer_name = customer_name or top_name
+                customer_name_conf = customer_name_conf or 0.8
+                customer_name_bbox = customer_name_bbox or top_bbox
+            if top_addr:
+                customer_address = customer_address or top_addr
+                customer_address_conf = customer_address_conf or 0.8
+                customer_address_bbox = customer_address_bbox or top_bbox
+        if pdf_page_lines:
+            bill_name, bill_addr, bill_bbox = _extract_column_block(pdf_page_lines, "bill to")
+            if bill_name:
+                customer_name = bill_name
+                customer_name_conf = 0.99
+                customer_name_bbox = bill_bbox
+            if bill_addr:
+                customer_address = bill_addr
+                customer_address_conf = 0.99
+                customer_address_bbox = bill_bbox
+            # Use PDF right-of-label for crisp key fields
+            pdf_po, pdf_po_bbox = _extract_value_right_of_label(
+                pdf_page_lines, ["po number", "order number", "purchase order"], max_dx=320, require_digits=True
+            )
+            if pdf_po:
+                po_number, po_conf, po_bbox = pdf_po, 0.99, pdf_po_bbox
 
-        po_number, po_conf, po_bbox = _extract_po(lines)
-        invoice_date, invoice_conf, invoice_bbox = _extract_date(
-            lines, _DATE_LABELS, exclude_terms=["due"]
-        )
-        due_date, due_conf, due_bbox = _extract_date(
-            lines, _DUE_LABELS, exclude_terms=["invoice"]
-        )
+            pdf_inv_date, pdf_inv_bbox = _extract_value_right_of_label(
+                pdf_page_lines, ["invoice date"], max_dx=320
+            )
+            if pdf_inv_date:
+                parsed = parse_date(pdf_inv_date)
+                if parsed:
+                    invoice_date, invoice_conf, invoice_bbox = parsed.isoformat(), 0.99, pdf_inv_bbox
 
-        subtotal, subtotal_conf, subtotal_bbox = _extract_amount(
-            lines, _SUBTOTAL_LABELS
-        )
-        tax_amount, tax_conf, tax_bbox = _extract_amount(
-            lines, _TAX_LABELS, exclude_terms=["tax id", "taxid"]
-        )
-        total_amount, total_conf, total_bbox = _extract_total_amount(lines)
+            pdf_due_date, pdf_due_bbox = _extract_value_right_of_label(
+                pdf_page_lines, ["due date"], max_dx=320
+            )
+            if pdf_due_date:
+                parsed = parse_date(pdf_due_date)
+                if parsed:
+                    due_date, due_conf, due_bbox = parsed.isoformat(), 0.99, pdf_due_bbox
+
+            pdf_subtotal, pdf_sub_conf, pdf_sub_bbox = _extract_amount_pdf(
+                pdf_page_lines, ["subtotal"], max_dx=220
+            )
+            if pdf_subtotal is not None:
+                subtotal, subtotal_conf, subtotal_bbox = pdf_subtotal, pdf_sub_conf, pdf_sub_bbox
+            pdf_tax, pdf_tax_conf, pdf_tax_bbox = _extract_amount_pdf(
+                pdf_page_lines, ["tax", "sales tax"], max_dx=220
+            )
+            if pdf_tax is not None:
+                tax_amount, tax_conf, tax_bbox = pdf_tax, pdf_tax_conf, pdf_tax_bbox
+            pdf_total, pdf_total_conf, pdf_total_bbox = _extract_amount_pdf(
+                pdf_page_lines, ["balance due", "amount due", "total due", "total"], max_dx=320
+            )
+            if pdf_total is not None:
+                total_amount, total_conf, total_bbox = pdf_total, pdf_total_conf, pdf_total_bbox
+
+        if po_number is None:
+            po_number, po_conf, po_bbox = _extract_po(lines)
+        if invoice_date is None:
+            invoice_date, invoice_conf, invoice_bbox = _extract_date(
+                lines, _DATE_LABELS, exclude_terms=["due"]
+            )
+        if due_date is None:
+            due_date, due_conf, due_bbox = _extract_date(
+                lines, _DUE_LABELS, exclude_terms=["invoice"]
+            )
+        if subtotal is None:
+            subtotal, subtotal_conf, subtotal_bbox = _extract_amount(
+                lines, _SUBTOTAL_LABELS
+            )
+        if tax_amount is None:
+            tax_amount, tax_conf, tax_bbox = _extract_amount(
+                lines, _TAX_LABELS, exclude_terms=["tax id", "taxid"]
+            )
+        if total_amount is None:
+            total_amount, total_conf, total_bbox = _extract_total_amount(lines)
 
         fallback_lines = None
         image_path = RENDERED_DIR / f"{inv_id}_p1.png"
@@ -999,6 +1266,9 @@ def build_ocr_results():
             "confidence_scores": confidence_scores,
             "bounding_boxes": bounding_boxes,
         }
+
+        if pdf_doc:
+            pdf_doc.close()
 
     return results
 

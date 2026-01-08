@@ -1,29 +1,8 @@
 {
   "invoice_id": "INV-G-011",
-  "status": "needs_review",
-  "confidence_score": 0.6062966002994231,
-  "discrepancies": [
-    {
-      "field": "invoice_date",
-      "issue_type": "warning",
-      "expected": "2016-01-25",
-      "detected": null,
-      "confidence": 0.6,
-      "suggestion": "Date missing or unparseable",
-      "bounding_box": null
-    }
-  ],
-  "visualization": [
-    {
-      "bounding_box": {
-        "x1": 10,
-        "y1": 20,
-        "x2": 260,
-        "y2": 38
-      },
-      "label": "invoice_date",
-      "severity": "warning"
-    }
-  ],
-  "highlight_image": "sample_outputs\\images\\INV-G-011_p1.png"
+  "status": "approved",
+  "confidence_score": 0.8126023746738055,
+  "discrepancies": [],
+  "visualization": [],
+  "highlight_image": "sample_outputs/images/INV-G-011_p1.png"
 }

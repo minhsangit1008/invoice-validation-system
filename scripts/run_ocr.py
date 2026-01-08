@@ -7,7 +7,7 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from PIL import Image
+from PIL import Image, ImageFilter, ImageOps
 import pytesseract
 
 from src.config import (
@@ -40,11 +40,19 @@ def _resolve_langs():
 
 
 def _tess_config():
-    return ""
+    return f"--oem 3 --psm 6 -c preserve_interword_spaces=1 --dpi {OCR_DPI}"
+
+
+def _preprocess_image(img):
+    gray = ImageOps.grayscale(img)
+    gray = ImageOps.autocontrast(gray)
+    denoised = gray.filter(ImageFilter.MedianFilter(size=3))
+    bw = denoised.point(lambda p: 0 if p < 160 else 255)
+    return bw
 
 
 def _ocr_image(image_path):
-    img = Image.open(image_path)
+    img = _preprocess_image(Image.open(image_path))
     config = _tess_config()
     data = pytesseract.image_to_data(
         img,

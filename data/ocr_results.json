@@ -1,40 +1,45 @@
 {
   "INV-G-001": {
-    "raw_text": "GS Uicednvoices\nInvoice\n]\n|\nInvoice Number\n|\nL\nFrom:\n|\nOrder Number 12345\nDEMO - Sliced Invoices\nInvoice Date January 25, 2016\n| Due Date January 31, 2016 7\nSuite 5A-1204\n123 Somewhere Street\nYour City AZ 12345\n| Total Due $93.50 |\nadmin @slicedinvoices.com\nTo:\nTest Business\n123 Somewhere St\nMelbourne, VIC 3000\ntest@test.com\nre a — — —“\"“r_”\"`—”\"'— ffffff —\nRate/Price Adjust | Sub Total |\n———_——_—_ —\nìỉÍHrslQty Service\n$85.00 0.00% | $85.00 |\n| :\n4.00 Web Design\nThis is a sample description...\nL\nế ~ Ổ SubTotal | - $85.00 |\na Tax | 50 |\n| Total $93.50 |\nANZ Bank\nACC # 1234 1234\nBSB # 4321 432\nPayment is due within 30 days from date of invoice. Late payment is subject to fees of 5% per month.\nThanks for choosing DEMO - Sliced Invoices | admin @slicedinvoices.com\nPage 1/1",
+    "raw_text": "® iced nvoices\nInvoice Number 11NV-3387-- I I|\nFrom: ị.__rl`í(j_Ic2ía.-.ÌJl'r1__e\"___…_..1l___.ị..____f.____…_……_\nDEMO - Sliced Invoices ¡ Order Number _ “285\nSuite 5A-1204 | Invoice Date | January 25, 2016\n123 Somewhere Street Due Date ! January 31, 2016 i\nYour City AZ 12345 Touipue ggaso oT\nadmin@slicedinvoices.com _JotalDue _ _.. 199350 00 I I\nTo:\nTest Business\n123 Somewhere St\nMelbourne, VIC 3000\ntest@testcom\nị Hrs/Qty Service | Rate/Price Adjust Sub Total ;\n1.00 | Wo ee earoie description. | $85.00 | 0.00% L $85.00 |\n| Sub Total | $85.00 |\nTax | $8.50 |\nfp np oT\n¡ Total | $93.50 |\nANZ Bank\nACC # 1234 1234\nBSB # 4321 432\nPayment is due within 30 days from date of invoice. Late payment is subject to fees of 5% per month.\nThanks for choosing DEMO - Sliced Invoices | admin @slicedinvoices.com\nPage 1/1",
     "structured_data": {
-      "vendor_name": "|",
-      "vendor_address": null,
+      "vendor_name": "Your City AZ 12345 Touipue ggaso oT",
+      "vendor_address": "DEMO - Sliced Invoices ¡ Order Number _ “285, Suite 5A-1204 | Invoice Date | January 25, 2016",
       "customer_name": "Test Business",
       "customer_address": "123 Somewhere St, Melbourne, VIC 3000",
       "po_number": "12345",
       "invoice_date": "2016-01-25",
       "due_date": "2016-01-31",
       "subtotal": 85.0,
-      "tax_amount": 50.0,
+      "tax_amount": 8.5,
       "total_amount": 93.5,
       "line_items": []
     },
     "confidence_scores": {
-      "vendor_name": 0.93,
-      "vendor_address": null,
-      "customer_name": 0.96,
-      "customer_address": 0.783171201814059,
-      "po_number": 0.92,
-      "invoice_date": 0.914,
-      "due_date": 0.7614285714285713,
-      "subtotal": 0.615,
-      "tax_amount": 0.65,
-      "total_amount": 0.95,
+      "vendor_name": 0.5442857142857143,
+      "vendor_address": 0.7148194444444445,
+      "customer_name": 0.915,
+      "customer_address": 0.8204558404558404,
+      "po_number": 0.99,
+      "invoice_date": 0.99,
+      "due_date": 0.99,
+      "subtotal": 0.6933333333333332,
+      "tax_amount": 0.9,
+      "total_amount": 0.99,
       "line_items": null
     },
     "bounding_boxes": {
       "vendor_name": {
-        "x1": 1426,
-        "y1": 570,
-        "x2": 1429,
-        "y2": 594
+        "x1": 190,
+        "y1": 729,
+        "x2": 2314,
+        "y2": 802
       },
-      "vendor_address": null,
+      "vendor_address": {
+        "x1": 189,
+        "y1": 571,
+        "x2": 2315,
+        "y2": 850
+      },
       "customer_name": {
         "x1": 192,
         "y1": 1061,
@@ -44,54 +49,54 @@
       "customer_address": {
         "x1": 194,
         "y1": 1111,
-        "x2": 2329,
-        "y2": 3397
+        "x2": 2327,
+        "y2": 1716
       },
       "po_number": {
-        "x1": 1461,
-        "y1": 571,
-        "x2": 1992,
-        "y2": 605
+        "x1": 1921,
+        "y1": 566,
+        "x2": 2025,
+        "y2": 603
       },
       "invoice_date": {
-        "x1": 1464,
-        "y1": 634,
-        "x2": 2174,
-        "y2": 671
+        "x1": 1921,
+        "y1": 633,
+        "x2": 2210,
+        "y2": 670
       },
       "due_date": {
-        "x1": 1424,
-        "y1": 649,
-        "x2": 2313,
-        "y2": 774
+        "x1": 1921,
+        "y1": 699,
+        "x2": 2210,
+        "y2": 736
       },
       "subtotal": {
-        "x1": 1440,
+        "x1": 1442,
         "y1": 1623,
-        "x2": 2326,
-        "y2": 1700
+        "x2": 2327,
+        "y2": 1716
       },
       "tax_amount": {
-        "x1": 1441,
-        "y1": 1647,
-        "x2": 2328,
-        "y2": 1785
+        "x1": 1776,
+        "y1": 1710,
+        "x2": 2327,
+        "y2": 1744
       },
       "total_amount": {
-        "x1": 1429,
-        "y1": 760,
-        "x2": 2315,
-        "y2": 811
+        "x1": 1921,
+        "y1": 766,
+        "x2": 2035,
+        "y2": 803
       },
       "line_items": null
     }
   },
   "INV-G-002": {
-    "raw_text": "Contoso, Ltd. Project Statement\nDate: 9/10/2020\nReceipt # No.: 9876\nSoldTo Winglip Toys\n554 Magnolia Way\nWalnut, WY, 98432\nID#: 5554443\nLive Delivery: Bx] Online Delivery (Livestream): [X] Video Delivery (On Demand): [ ]\n12/5/2020 Manager Training $3,500 $3,500\n12/10/2020 Manager Training $3,500 - $3,500\n12/11/2020 Leadership Training $4,500 25% $3,375\nSubtotal $10,375\nSales Tax 3%\nTotal $10,686.25\nThank you for your business!",
+    "raw_text": "Project Statement\nDate: 9/10/2020\nReceipt # No.: 9876\nSold To Wingtip Toys\n554 Magnolia Way\nWalnut, WY, 98432\nID#: 5554443\nLive Delivery: Online Delivery (Livestream): Video Delivery (On Demand): []\n12/5/2020 Manager Training $3,500 - $3,500\n12/10/2020 Manager Training $3,500 - $3,500\n12/11/2020 Leadership Training $4,500 25% $3,375\nSubtotal $10,375\nSales Tax 3%\nTotal $10,686.25\nThank you for your business!",
     "structured_data": {
-      "vendor_name": "Contoso, Ltd. Project Statement",
+      "vendor_name": "Contoso, Ltd.",
       "vendor_address": null,
-      "customer_name": "Winglip Toys",
+      "customer_name": "Wingtip Toys",
       "customer_address": "554 Magnolia Way, Walnut, WY, 98432",
       "po_number": null,
       "invoice_date": "2020-10-09",
@@ -102,24 +107,24 @@
       "line_items": []
     },
     "confidence_scores": {
-      "vendor_name": 0.9375,
+      "vendor_name": 0.99,
       "vendor_address": null,
-      "customer_name": 0.6475,
-      "customer_address": 0.9583333333333333,
+      "customer_name": 0.7675,
+      "customer_address": 0.9462424242424242,
       "po_number": null,
-      "invoice_date": 0.95,
+      "invoice_date": 0.96,
       "due_date": null,
-      "subtotal": 0.93,
-      "tax_amount": 0.96,
-      "total_amount": 0.955,
+      "subtotal": 0.96,
+      "tax_amount": 0.9533333333333333,
+      "total_amount": 0.99,
       "line_items": null
     },
     "bounding_boxes": {
       "vendor_name": {
-        "x1": 176,
-        "y1": 113,
-        "x2": 2430,
-        "y2": 269
+        "x1": 175,
+        "y1": 106,
+        "x2": 721,
+        "y2": 246
       },
       "vendor_address": null,
       "customer_name": {
@@ -129,10 +134,10 @@
         "y2": 537
       },
       "customer_address": {
-        "x1": 631,
+        "x1": 169,
         "y1": 604,
-        "x2": 928,
-        "y2": 684
+        "x2": 2346,
+        "y2": 2411
       },
       "po_number": null,
       "invoice_date": {
@@ -146,27 +151,27 @@
         "x1": 1705,
         "y1": 1896,
         "x2": 2314,
-        "y2": 1949
+        "y2": 1936
       },
       "tax_amount": {
-        "x1": 1706,
+        "x1": 1707,
         "y1": 1977,
         "x2": 2268,
         "y2": 2016
       },
       "total_amount": {
-        "x1": 1706,
-        "y1": 2057,
-        "x2": 2346,
-        "y2": 2097
+        "x1": 2139,
+        "y1": 2064,
+        "x2": 2373,
+        "y2": 2115
       },
       "line_items": null
     }
   },
   "INV-G-003": {
-    "raw_text": "INVOICE\nCONTOSO LTD.\nINVOICE: INV-100\nContoso Headquarters\n123 456\" St\nINVOICE DATE: 11/15/2019\nDUE DATE: 12/15/2019\nNew York, NY, 10001\nCUSTOMER NAME: MICROSOFT CORPORATION\nSERVICE PERIOD: 10/14/2019 — 11/14/2019\nCUSTOMER ID: CID-12345\nMicrosoft Corp\n123 Other St,\nRedmond WA, 98052\nBILL TO:\nSHIP TO: SERVICE ADDRESS:\nMicrosoft Finance\nMicrosoft Delivery Microsoft Services\n123 Bill St,\n123 Ship St, 123 Service St,\nRedmond WA, 98052\nRedmond WA, 98052 Redmond WA, 98052\nREQUISITIONER SHIPPED VIA | F.O.B. POINT TERMS\nSALESPERSON P.O. NUMBER\nPO-3333\nDATE ITEM CODE\nDESCRIPTION QTY UM PRICE TAX AMOUNT\nConsulting Services hours $30.00 | $6.00 $60.00\n3/4/2021 A123\nDocument Fee $10.00 | $3.00 $30.00\n3/5/2021 B456\nPrinting Fee pages $1.00 | $1.00 $10.00\n3/6/2021 C789\nSUBTOTAL $100.00\nSALES TAX $10.00\nTOTAL $110.00\nPREVIOUS UNPAID BALANCE $500.00\nAMOUNT DUE $610.00\nTHANK YOU FOR YOUR BUSINESS!\nREMIT TO:\nContoso Billing\n123 Remit St\nNew York, NY, 10001",
+    "raw_text": "CONTOSO LTD. INVOICE\nContoso Headquarters INVOICE: INV-100\n123 456\" St INVOICE DATE: 11/15/2019\nNew York, NY, 10001 DUE DATE: 12/15/2019\nCUSTOMER NAME: MICROSOFT CORPORATION\nSERVICE PERIOD: 10/14/2019 — 11/14/2019\nCUSTOMER ID: CID-12345\nMicrosoft Corp\n123 Other St,\nRedmond WA, 98052\nBILL TO: SHIP TO: SERVICE ADDRESS:\nMicrosoft Finance Microsoft Delivery Microsoft Services\n123 Bill St, 123 Ship St, 123 Service St,\nRedmond WA, 98052 Redmond WA, 98052 Redmond WA, 98052\n| Po 3333 T ee ,\npare |memcopr] - ĐEscwPnow - |om] m | pmice | Tax | AMOUNT\n3/4/2021 | A123 | Consulting Services $30.00| $6.00] $60.00\nSUBTOTAL $100.00\nSALES TAX $10.00\nTOTAL $110.00\nPREVIOUS UNPAID BALANCE $500.00\nAMOUNT DUE $610.00\nTHANK YOU FOR YOUR BUSINESS!\nREMIT TO:\nContoso Billing\n123 Remit St\nNew York, NY, 10001",
     "structured_data": {
-      "vendor_name": "Microsoft Corp",
+      "vendor_name": "CUSTOMER NAME: MICROSOFT CORPORATION",
       "vendor_address": null,
       "customer_name": "Microsoft Finance",
       "customer_address": "123 Bill St,, Redmond WA, 98052",
@@ -179,37 +184,37 @@
       "line_items": []
     },
     "confidence_scores": {
-      "vendor_name": 0.96,
+      "vendor_name": 0.99,
       "vendor_address": null,
-      "customer_name": 0.955,
-      "customer_address": 0.96,
-      "po_number": 0.9575,
-      "invoice_date": 0.96,
+      "customer_name": 0.99,
+      "customer_address": 0.99,
+      "po_number": 0.96,
+      "invoice_date": 0.9033333333333333,
       "due_date": 0.96,
-      "subtotal": 0.96,
-      "tax_amount": 0.96,
-      "total_amount": 0.9566666666666667,
+      "subtotal": 0.99,
+      "tax_amount": 0.99,
+      "total_amount": 0.99,
       "line_items": null
     },
     "bounding_boxes": {
       "vendor_name": {
-        "x1": 178,
-        "y1": 793,
-        "x2": 476,
-        "y2": 836
+        "x1": 1483,
+        "y1": 606,
+        "x2": 2398,
+        "y2": 652
       },
       "vendor_address": null,
       "customer_name": {
-        "x1": 178,
-        "y1": 1129,
-        "x2": 537,
-        "y2": 1163
+        "x1": 174,
+        "y1": 1125,
+        "x2": 617,
+        "y2": 1297
       },
       "customer_address": {
-        "x1": 178,
-        "y1": 1190,
-        "x2": 603,
-        "y2": 1292
+        "x1": 174,
+        "y1": 1125,
+        "x2": 617,
+        "y2": 1297
       },
       "po_number": {
         "x1": 1485,
@@ -218,45 +223,45 @@
         "y2": 642
       },
       "invoice_date": {
-        "x1": 1868,
-        "y1": 484,
+        "x1": 178,
+        "y1": 482,
         "x2": 2398,
         "y2": 523
       },
       "due_date": {
-        "x1": 1949,
+        "x1": 178,
         "y1": 546,
         "x2": 2398,
-        "y2": 585
+        "y2": 590
       },
       "subtotal": {
-        "x1": 1809,
-        "y1": 2061,
-        "x2": 2376,
-        "y2": 2107
+        "x1": 2212,
+        "y1": 2060,
+        "x2": 2389,
+        "y2": 2110
       },
       "tax_amount": {
-        "x1": 1812,
-        "y1": 2150,
-        "x2": 2376,
-        "y2": 2196
+        "x1": 2238,
+        "y1": 2149,
+        "x2": 2389,
+        "y2": 2199
       },
       "total_amount": {
-        "x1": 1730,
-        "y1": 2418,
-        "x2": 2376,
-        "y2": 2464
+        "x1": 2212,
+        "y1": 2417,
+        "x2": 2389,
+        "y2": 2467
       },
       "line_items": null
     }
   },
   "INV-G-004": {
-    "raw_text": "CONTOSO LTD. INVOICE\nINVOICE: INV-100\nContoso Headquarters\nINVOICE DATE: 11/15/2019\n123 456\" St\nDUE DATE: 12/15/2019\nNew York, NY, 10001\nCUSTOMER NAME: MICROSOFT CORPORATION\nSERVICE PERIOD: 10/14/2019 — 11/14/2019\nCUSTOMER ID: CID-12345\nMicrosoft Corp\n123 Other St,\nRedmond WA, 98052\nBILL TO: SHIP TO: SERVICE ADDRESS:\nMicrosoft Finance Microsoft Delivery Microsoft Services\n123 Bill St, 123 Ship St, 123 Service St,\nRedmond WA, 98052 Redmond WA, 98052\nRedmond WA, 98052\nF.O.B. POINT\nSALESPERSON REQUISITIONER SHIPPED VIA\nP.O. NUMBER\nPO-3333\nAMOUNT\nDESCRIPTION QTY UM PRICE TAX\nDATE ITEM CODE\nhours S30.00 | $6.00 $60.00\nConsulting Services\n3/4/2021 A123\n$10.00 | $3.00 $30.00\nDocument Fee\n3/5/2021 B456\n3/6/2021 C789 Printing Fee 10 | pages $1.00 | $1.00 $10.00\nSUBTOTAL $100.00\nSALES TAX $10.00\nTOTAL $110.00\nPREVIOUS UNPAID BALANCE $500.00\nAMOUNT DUE $610.00\nTHANK YOU FOR YOUR BUSINESS!\nREMIT TO:\nContoso Billing\n123 Remit St\nNew York, NY, 10001",
+    "raw_text": "CONTOSO LTD. INVOICE\nContoso Headquarters INVOICE: INV-100\n123 456\" St INVOICE DATE: 11/15/2019\nNew York, NY, 10001 DUE DATE: 12/15/2019\nCUSTOMER NAME: MICROSOFT CORPORATION\nSERVICE PERIOD: 10/14/2019 — 11/14/2019\nCUSTOMER ID: CID-12345\nMicrosoft Corp\n123 Other St,\nRedmond WA, 98052\nBILL TO: SHIP TO: SERVICE ADDRESS:\nMicrosoft Finance Microsoft Delivery Microsoft Services\n123 Bill St, 123 Ship St, 123 Service St,\nRedmond WA, 98052 Redmond WA, 98052 Redmond WA, 98052\n|_| Po-3333 es l. i\nGare] eweooe | - ĐEsoAPnow [ary] um | price | Tax ] AMOUNT\n3/4/2021 | A123 _| Consulting Services s30.00 | $6.00 | $60.00\nSUBTOTAL $100.00\nSALES TAX $10.00\nTOTAL $110.00\nPREVIOUS UNPAID BALANCE $500.00\nAMOUNT DUE $610.00\nTHANK YOU FOR YOUR BUSINESS!\nREMIT TO:\nContoso Billing\n123 Remit St\nNew York, NY, 10001",
     "structured_data": {
-      "vendor_name": "Microsoft Corp",
+      "vendor_name": "CUSTOMER NAME: MICROSOFT CORPORATION",
       "vendor_address": null,
-      "customer_name": "SHIP TO: SERVICE ADDRESS:",
-      "customer_address": "Microsoft Finance Microsoft Delivery Microsoft Services, 123 Bill St, 123 Ship St, 123 Service St,",
+      "customer_name": "Microsoft Finance",
+      "customer_address": "123 Bill St,, Redmond WA, 98052",
       "po_number": "CORPORATION",
       "invoice_date": "2019-11-15",
       "due_date": "2019-12-15",
@@ -266,37 +271,37 @@
       "line_items": []
     },
     "confidence_scores": {
-      "vendor_name": 0.96,
+      "vendor_name": 0.99,
       "vendor_address": null,
-      "customer_name": 0.95,
-      "customer_address": 0.951547619047619,
+      "customer_name": 0.99,
+      "customer_address": 0.99,
       "po_number": 0.9575,
-      "invoice_date": 0.9533333333333333,
-      "due_date": 0.9533333333333333,
-      "subtotal": 0.955,
-      "tax_amount": 0.96,
-      "total_amount": 0.96,
+      "invoice_date": 0.9033333333333333,
+      "due_date": 0.9585714285714286,
+      "subtotal": 0.99,
+      "tax_amount": 0.99,
+      "total_amount": 0.99,
       "line_items": null
     },
     "bounding_boxes": {
       "vendor_name": {
-        "x1": 189,
-        "y1": 824,
-        "x2": 487,
-        "y2": 865
+        "x1": 1510,
+        "y1": 613,
+        "x2": 2441,
+        "y2": 659
       },
       "vendor_address": null,
       "customer_name": {
-        "x1": 192,
-        "y1": 1072,
-        "x2": 2242,
-        "y2": 1130
+        "x1": 177,
+        "y1": 1138,
+        "x2": 628,
+        "y2": 1312
       },
       "customer_address": {
-        "x1": 194,
-        "y1": 1136,
-        "x2": 2309,
-        "y2": 1459
+        "x1": 177,
+        "y1": 1138,
+        "x2": 628,
+        "y2": 1312
       },
       "po_number": {
         "x1": 1494,
@@ -305,132 +310,137 @@
         "y2": 657
       },
       "invoice_date": {
-        "x1": 1875,
+        "x1": 185,
         "y1": 488,
         "x2": 2405,
-        "y2": 528
+        "y2": 556
       },
       "due_date": {
-        "x1": 1957,
+        "x1": 186,
         "y1": 550,
         "x2": 2406,
-        "y2": 590
+        "y2": 621
       },
       "subtotal": {
-        "x1": 1838,
-        "y1": 2066,
-        "x2": 2405,
-        "y2": 2117
+        "x1": 2252,
+        "y1": 2082,
+        "x2": 2432,
+        "y2": 2133
       },
       "tax_amount": {
-        "x1": 1842,
-        "y1": 2154,
-        "x2": 2406,
-        "y2": 2206
+        "x1": 2279,
+        "y1": 2172,
+        "x2": 2432,
+        "y2": 2223
       },
       "total_amount": {
-        "x1": 1764,
-        "y1": 2423,
-        "x2": 2410,
-        "y2": 2475
+        "x1": 2252,
+        "y1": 2443,
+        "x2": 2432,
+        "y2": 2494
       },
       "line_items": null
     }
   },
   "INV-G-005": {
-    "raw_text": "Invoice\nInvoice# INV-17\nBalance Due\nZylker\n$562.750\n4141 Hacienda Dr\nPleasanton California 94588\nU.S.A\n03 May 2018\nInvoice Date :\nDue On Receipt\nTerms:\nBill To\n03 May 2018\nDue Date:\nRob & Joe Traders\n2708 Southside Lane\n321014\nP.O.#:\nLos Angeles\n90018 CA\nDesign project\nProject Name :\nUSA\nAmount\nQty Rate Discount\n# Item & Description\n300.000\n1.00 300.000 0.00\n1 Brochure Design\nBrochure Design Single Sided Color\n250.000\n1.00 250.000 0.00\n2 Web Design Packages(Template) - Basic\nCustom Themes for your business. Inclusive of 10\nhours of marketing and annual training\n80.000\n1.00 80.000 0.00\n3 Print Ad - Basic - Color\nPrint Ad 1/8 size Color\n630.000\nSub Total\n11.750\nSample Tax1 (4.70%)\n21.000\nSample Tax2 (7.00%)\n$662.750\nTotal\n(-) 100.000\nPayment Made\n$562.750\nBalance Due\nNotes\nThanks for your business.\nPayment Options | PayPal — ..\nTerms & Conditions\nPlease pay the Invoice before the due date.\nThis sample invoice template was created using ØØ J Invoice",
+    "raw_text": "@ Invoice# INV-17\nInvoice\nyiker ienda D Balance Due\nPleasanton California 94588 $562.750\nacienda Dr\nU.S.A\nInvoice Date : 03May 2018\n. Terms: Due On Receipt\nBill To P\nRob & joe Traders Due Date: 03 May 2018\n2708 Southside Lane\nLos Angeles P.O.#: 321014\n90018 CA , , ,\nUSA Project Name : Design project\n# Item & Description Qty Rate Discount Amount\n1 Brochure Design 1.00 300.000 0.00 300.000\nBrochure Design Single Sided Color\n2 Web Design Packages(Template) - Basic 1.00 250.000 0.00 250.000\nCustom Themes for your business. Inclusive of 10\nhours of marketing and annual training\n3 Print Ad - Basic - Color 1.00 80.000 0.00 80.000\nPrint Ad 1/8 size Color\nSub Total 630.000\nSample Taxi (4.70%) 11.750\nSample Tax2 (7.00%) 21.000\nTotal $662.750\nPayment Made (-) 100.000\nBalance Due $562.750\nNotes\nThanks for your business.\nPayment Options PoyPEl EE\nTerms & Conditions\nPlease pay the Invoice before the due date.\nThis sample invoice template was created using f9m Invoice",
     "structured_data": {
-      "vendor_name": "Invoice",
-      "vendor_address": "Invoice# INV-17, Balance Due",
-      "customer_name": "tal",
-      "customer_address": "(-) 100.000, Payment Made",
+      "vendor_name": "@ Invoice# INV-17",
+      "vendor_address": "Invoice, yiker ienda D Balance Due",
+      "customer_name": "Rob & Joe Traders",
+      "customer_address": "2708 Southside Lane, Los Angeles",
       "po_number": "321014",
       "invoice_date": "2018-05-03",
-      "due_date": null,
+      "due_date": "2018-05-03",
       "subtotal": 630000.0,
-      "tax_amount": 4.7,
+      "tax_amount": 11750.0,
       "total_amount": 562750.0,
       "line_items": []
     },
     "confidence_scores": {
-      "vendor_name": 0.95,
-      "vendor_address": 0.9266666666666666,
-      "customer_name": 0.96,
-      "customer_address": 0.9012083333333333,
-      "po_number": 0.95,
-      "invoice_date": 0.96,
-      "due_date": null,
+      "vendor_name": 0.8633333333333333,
+      "vendor_address": 0.8228333333333332,
+      "customer_name": 0.99,
+      "customer_address": 0.99,
+      "po_number": 0.915,
+      "invoice_date": 0.99,
+      "due_date": 0.99,
       "subtotal": 0.96,
-      "tax_amount": 0.91,
-      "total_amount": 0.9466666666666668,
+      "tax_amount": 0.9425,
+      "total_amount": 0.99,
       "line_items": null
     },
     "bounding_boxes": {
       "vendor_name": {
-        "x1": 1968,
-        "y1": 276,
-        "x2": 2336,
-        "y2": 365
+        "x1": 197,
+        "y1": 269,
+        "x2": 2341,
+        "y2": 504
       },
       "vendor_address": {
         "x1": 199,
-        "y1": 407,
-        "x2": 2343,
-        "y2": 572
+        "y1": 276,
+        "x2": 2344,
+        "y2": 664
       },
       "customer_name": {
-        "x1": 1820,
-        "y1": 2281,
-        "x2": 1913,
-        "y2": 2311
+        "x1": 197,
+        "y1": 982,
+        "x2": 567,
+        "y2": 1132
       },
       "customer_address": {
-        "x1": 230,
-        "y1": 2389,
-        "x2": 2340,
-        "y2": 3446
+        "x1": 197,
+        "y1": 982,
+        "x2": 567,
+        "y2": 1132
       },
       "po_number": {
-        "x1": 2221,
+        "x1": 213,
         "y1": 1081,
         "x2": 2348,
-        "y2": 1110
+        "y2": 1151
       },
       "invoice_date": {
-        "x1": 2125,
-        "y1": 822,
-        "x2": 2343,
-        "y2": 859
+        "x1": 2153,
+        "y1": 815,
+        "x2": 2379,
+        "y2": 865
       },
-      "due_date": null,
+      "due_date": {
+        "x1": 2153,
+        "y1": 989,
+        "x2": 2379,
+        "y2": 1039
+      },
       "subtotal": {
-        "x1": 2196,
+        "x1": 1749,
         "y1": 1940,
         "x2": 2331,
-        "y2": 1970
+        "y2": 1975
       },
       "tax_amount": {
         "x1": 1555,
-        "y1": 2058,
-        "x2": 1911,
+        "y1": 2052,
+        "x2": 2332,
         "y2": 2098
       },
       "total_amount": {
-        "x1": 1689,
-        "y1": 2508,
-        "x2": 2340,
-        "y2": 2544
+        "x1": 2187,
+        "y1": 2518,
+        "x2": 2351,
+        "y2": 2569
       },
       "line_items": null
     }
   },
   "INV-G-006": {
-    "raw_text": "Bill To\n2708 Southside Lane\nLos Angeles .\n90018 CA Invoice\nUSA INV-17\nInvoice Date 03 May 2018 $\nBalance Due $514.350\nTerms Due On Receipt\nDue Date 03 May 2018\nP.O.# 321014\nProject Name Design project\n# Item&Description Qty Rate Discount Amount\n1 Brochure Design 1.00 $300.000 0.00 $300.000\nBrochure Design Single Sided Color\n2 Web Design Packages(Template) - Basic 1.00 $250.000 0.00 $250.000\nCustom Themes for your business. Inclusive of 10\nhours of marketing and annual training\n\\ t HH Sub Total 550.000\nPayment Options | PayPal EE\nSample Tax1 (4.70%) 25.850\nSample Tax2 (7.00%) 38.500\nTotal $662.750\nPayment Made (-) 100.000\nBalance Due $514.350\nThanks for your business.\nTerms & Conditions\nPlease pay the Invoice before the due date.\nZylker 4141 Hacienda Dr Pleasanton California 94588 U.S.A\nThis sample invoice template was created using porte) Invoice",
+    "raw_text": "Bill To\n2708 Southside Lane\nLos Angeles H\n90018 CA Invoice\nUSA INV-17\nBalance Due $514.350\nInvoice Date 03 May 2018\nTerms Due On Receipt\nDue Date 03 May 2018\nP.O.# 321014\nProject Name Design project\n# ltem & Description Qty Rate Discount Amount\n1 Brochure Design 1.00 $300.000 0.00 $300.000\nBrochure Design Single Sided Color\n2 Web Design Packages(Template) - Basic 1.00 $250.000 0.00 $250.000\nCustom [hemes for your business. Inclusive of 10\nhours of marketing and annual training\n- . Sub Total 550.000\nPayment Options | PayPal EE\nSample Tax1 (4.70%) 25.850\nSample Tax2 (7.00%) 38.500\nTotal $662.750\nPayment Made (-) 100.000\nBalance Due $514,350\nThanks for your business.\nTerms & Conditions\nPlease pay the Invoice before the due date.\nZ Zylker 4141 Hacienda Dr Pleasanton California 94588 U.S.A\n1\nThis sample invoice template was created using FOGS | Invoice",
     "structured_data": {
       "vendor_name": "Bill To",
-      "vendor_address": "2708 Southside Lane, Los Angeles .",
-      "customer_name": "Terms Due On Receipt",
-      "customer_address": "Balance Due $514.350, Due Date 03 May 2018",
+      "vendor_address": "2708 Southside Lane, Los Angeles H",
+      "customer_name": "Los Angeles",
+      "customer_address": "2708 Southside Lane, 90018 CA, USA",
       "po_number": "321014",
       "invoice_date": "2018-05-03",
       "due_date": null,
@@ -441,15 +451,15 @@
     },
     "confidence_scores": {
       "vendor_name": 0.96,
-      "vendor_address": 0.9266666666666666,
-      "customer_name": 0.955,
-      "customer_address": 0.9361111111111112,
+      "vendor_address": 0.9144444444444444,
+      "customer_name": 0.99,
+      "customer_address": 0.99,
       "po_number": 0.925,
-      "invoice_date": 0.95,
+      "invoice_date": 0.96,
       "due_date": null,
-      "subtotal": 0.6733333333333333,
-      "tax_amount": 0.93,
-      "total_amount": 0.9466666666666668,
+      "subtotal": 0.8079999999999999,
+      "tax_amount": 0.9325,
+      "total_amount": 0.99,
       "line_items": null
     },
     "bounding_boxes": {
@@ -461,64 +471,64 @@
       },
       "vendor_address": {
         "x1": 199,
-        "y1": 327,
+        "y1": 328,
         "x2": 2356,
         "y2": 469
       },
       "customer_name": {
-        "x1": 197,
-        "y1": 758,
-        "x2": 1140,
-        "y2": 798
+        "x1": 196,
+        "y1": 315,
+        "x2": 600,
+        "y2": 535
       },
       "customer_address": {
-        "x1": 201,
-        "y1": 632,
-        "x2": 2327,
-        "y2": 962
+        "x1": 196,
+        "y1": 315,
+        "x2": 600,
+        "y2": 535
       },
       "po_number": {
         "x1": 201,
         "y1": 931,
         "x2": 981,
-        "y2": 962
+        "y2": 961
       },
       "invoice_date": {
         "x1": 201,
-        "y1": 632,
-        "x2": 2140,
+        "y1": 671,
+        "x2": 1083,
         "y2": 711
       },
       "due_date": null,
       "subtotal": {
-        "x1": 455,
-        "y1": 2041,
+        "x1": 574,
+        "y1": 2039,
         "x2": 2312,
-        "y2": 2085
+        "y2": 2083
       },
       "tax_amount": {
         "x1": 1535,
-        "y1": 2155,
+        "y1": 2156,
         "x2": 2312,
         "y2": 2193
       },
       "total_amount": {
-        "x1": 1638,
-        "y1": 2610,
-        "x2": 2313,
-        "y2": 2644
+        "x1": 2136,
+        "y1": 2597,
+        "x2": 2314,
+        "y2": 2654
       },
       "line_items": null
     }
   },
   "INV-G-007": {
-    "raw_text": "a u u X\nTimelyBill’\nRemittance Section\nAccount Number: 9999296\nOperations Support System\nInvoice Date: 08/01/2018\nInvoice Number: 1009624\nTimelyBill\nDue Date: 08/31/2018\n4207 Burnwood Trl\nTotal Due: $1,431.27\nDenver, NC 28037-6212\nAmount Enclosed: $\nReturn Service Requested\nPlease put your account number on your check and make it\npayable to TimelyBill\nRemit to:\nTimelyBill\n4207 Burnwood Trl\nTimelyBill\nDenver, NC 28037-6212\n4207 Burnwood Trl\nDenver, NC 28037-6212\nPlease detach and return above portion with your payment.\nSS A SIE TInt aa\nImportant Messages\nInvoice Information\nAccount Number: 9999296\nInvoice Date: 04/01/2020\nThis is a sample invoice.\nInvoice Number: 1009624\nDue Date: 04/31/2020\nOur invoices are template based, and can be\nTotal Due: $1,431.27\ncustomized to fit the needs of today's\nEEE\ncommunications service providers.\nSummary of Charges\nBalance Information\nPrevious Balance 6,632.88\nPayments Received - Thank You 5,619.13\nBalance Forward 1,013.75\nAdjustments 0.00\nNew Charges\nRecurring Charges 417.52\nNon-Recurring Charges 0.00\nCall Charges 0.00\nTaxes and Surcharges 0.00\nLate Fee 0.00\nTotal New Charges 417.52\nTotal Amount Due: $1,431.27\nPlease pay this amount by 04/31/2020.\nee\nFor questions regarding your invoice please call Customer Service\nat 954-889-6699 or email billing@timelybill.com. For your security\nplease provide PIN: 478157 when you call.\nPage 1 of 4\nHave you moved or changed your phone number?\nPlease provide your new address or telephone number and remit this portion with your payment. Your records\nwill be updated upon request.\nEffective Date:\nAccount:\nZip:\nState:\nNew Address:\nPhone Number:\nContact Name:\nWork Number: Signature:\nOO\nHow to read your bill\nAccount Number - Your account\nnumber.\nTime lyBill’\nRemittance Section\nit will be helpful to have this number\nOperations Support System e Account Number: 9999296\nInvoice Date: 04/01/2020\nTimelyBill C2 Invoice Number: 1009624\nInvoice Number - A unique number\n4207 Burnwood Trl Due Date: [3] 04/31/2020\nwhich aids in identifying your invoice.\nDenver, NC 28037-6212 Total Due $1,431.27\nReturn Service Requested © Amount Enclosed: $\nPlease put your account number on your check and make\nDue Date - Bill must be paid before the\npayable to TimelyBill\nDue Date to avoid a late fee charge.\nAmount Enclosed - Please indicate the\nTimelyBill\n4207 Burnwood Trl\n®\npayment amount included with your\nDenver, NC 28037-6212\nremittance.\nBalance Forward - Balance left over\nfrom\nPease detach and relur above porton with your payment\n—_—<—<—<—_—$ —_——— ae\nRecurring Charges - Monthly recurring\nInvoice Information Important Messages\ncharges for service.\nAccount Number: 9999298 13)\nInvoice Date: 04/01/2020\nNon-Recurring Charges - One time\ninvoice Number: 1009624\ncharges for service.\nDue Date: 04/31/2020\nTotal Due: $1,431.27\nCall Charges - Total cost for calls made.\n—_\nSummary of Charges\nTaxes and Surcharges - Total taxes and\nsurcharges that have been applied to\nBalance Information\nPrevious Balance 6,632.88\nyour bill.\n§,619.13\nPayments Received - Thank you\n4,013.75\nBalance Forward\nNon-Recurring Charges - One time\nAdjustments 0.00\ncharges for service.\nNew Charges\nTotal New Charges - The total of this\ne Recurring Charges 417.52\nNon-Recurring Charges F) 9.00\nmonth's current activity.\nCall Charges 0.00\nTaxes and Surcharges C9 | 0.00\nRemittance Address\nLate Fee 0.00\nTotal New Charges\nImportant Messages\nTotal Amount Due: $1,431.27\nPlease pay this amount by 04/31/2020.\nFor questions regarding your bill\ncall customer service at 954-889-6699.\nBose n aero Customer Name Account Number Invoice Number\nTimelyBill\nTimelyBill 9999296 1009624\nPayment Detail\nDate Method Reference Amount\n03/18 Wire Wire -5,619.13\nTotal Payments $-5,619.13\nee\nRecurring Charges\nQty Services Dates Cost\nNetwork Recovery Fee 1 03/01/20-03/31/20 19.88\nTB-SMART OFFICE 14 03/01/20-03/31/20 286.30\nTB-UC UC Premium 4 03/01/20-03/31/20 50.16\nTB-VP VOICE PLUS 7 03/01/20-03/31/20 61.18\nTotal Recurring Charges $417.52\nPage 3 of 4\nInvoice Number\nAccount Number.\nTimelyBill’ Customer Name\n1009624\nOperations Support System\n9999296\nTimelyBill\nSSS\nDenver Office\n4207 Burnwood Tri\nDenver, NC 28650\n-.PẸ. .. . . . . Á a ]_—”__ m ”mrrn\nSummary of Charges\nNew Charges\nRecurring Charges 417.52\nNon-Recurring Charges 0.00\nCall Charges 0.00\nTaxes and Surcharges 0.00\nTotal New Charges $417.52\nRecurring Charges\nQty Services Dates Cost\nNetwork Recovery Fee 1 03/01/20-03/31/20 19.88\nTB-SMART OFFICE 14 093/01/20-03/31/20 286.30\nTB-UC UC Premium 4 03/01/20-03/31/20 50.16\nTB-VP VOICE PLUS 7 03/01/20-03/31/20 61.18\nTotal Recurring Charges 417.52\nPage 4 of 4",
+    "raw_text": "ee NS\nTimely Bill* Remittance Section\nOperations Support System Account Number: 9999296\nInvoice Date: 08/01/2018\nTimelyBil Invoice Number: 1009624\n4207 Burnwood Trl Due Date: 08/31/2018\nDenver, NC 28037-6212 Total Due: $1,431.27\nAmount Enclosed: $\nReturn Service Requested _\nPlease put your account number on your check and make it\npayable to TimelyBill\nRemit to:\nTimelyBill\nTimelyBill 4207 Burnwood Trl\n4207 Burnwood Trl Denver, NC 28037-6212\nDenver, NC 28037-6212\nSD ia a Acc\nPlease detach and return above portion with your payment\nInvoice Information Important Messages\nAccount Number: 9999296\nInvoice Date: 04/01/2020 = : .\nInvoice Number: 4009624 This is a sample invoice.\nDue Date: 04/31/2020\nTotal Due: $1,431.27 Our invoices are template based, and can be\ncustomized to fit the needs of today's\nSummary of Charges communications service providers.\nSey Nee T ỠỰmm/m/„\nBalance Information\nPrevious Balance 6,632.88\nPayments Received - Thank You 5,619.13\nBalance Forward 1,013.75\nAdjustments 0.00\nNew Charges\nRecurring Charges 417.52\nNon-Recurring Charges 0.00\nCall Charges 0.00\nTaxes and Surcharges 0.00\nLate Fee 0.00\nTotal New Charges 417.52\nTotal Amount Due: $1,431.27\nPlease pay this amount by 04/31/2020.\nee\nụ„Ữ—~⁄yøÂÀTiễẫ<x<;53úÕ3úa ˆ g1ÃŸyllCDm ›MY —“]¡”n\nFor questions regarding your invoice please call Customer Service\nat 954-889-6699 or email billing@timelybill.com. For your security\nplease provide PIN: 478157 when you call.\nPage 1 of 4\nHave you moved or changed your phone number?\nPlease provide your new address or telephone number and remit this portion with your payment. Your records\nwill be updated upon request.\nEffective Date:\nAccount: Name:\nNew Address: City: State: Zip:\nContact Name: Phone Number:\nWork Number: Signature:\nHow to read your bill\n1) Account Number - Your account\nTimel U Bill’ Remittance Section number.\nGeer A\\ ene 532271 orton © sccourt Numper 9994296 it will be helpful to have this number\nEìmelyBil rvmce Nee oe veeo\n4207 Burnwood TH 2) One ate ° 3) 04/41/2020 e Invoice Number - A unique number\nDenver. NG 28057-6212 Tota! Que $1439.27 which aids in identifying your invoice.\nRant n Bees cm Ang ee 4 Amount Enciosed. $\n.. . 3) Due Date - Bill must be paid before the\n200266 par your aceou\"l number om yc. check and make\nDue Date to avoid a late fee charge.\nhans brnwoed TA 4) Amount Enclosed - Please indicate the\nTimelyBill\nDenver, NC 28037-6212 & payment amount included with your\nremittance.\nrs ] Balance Forward - Balance left over\nfrom\ninvoice Information important Messages © Recurring Charges - Monthly recurring\nAccount Number 9990295 © charges for service.\nIrvaice Date 0470172020,\ntevorce Number 1009624 @ Non-Recurting Charges - One time\nDue Date 04/31/2020 .\nTota! Due 6143127 charges for service.\nSummary of Charges rs] Call Charges - Total cost for calls made.\n-. .. m\n9) Taxes and Surcharges - Total taxes and\nPrevious Balance 6.632 88 surcharges that have been applied to\nBalance Intormation\nPayments Recewad - Thank you 5619 13 your bill.\n5} Balance Forward 1,013.75\nAdjustments 0.00 Gg Non-Recurring Charges - One time\ncharges for service.\nNew Charges.\n0 ặmẵmị cages 7) aren ® Total New Charges - The total of this\nRecurring Charges 41752\n© om charses 000 month's current activity.\nTaxes and Surcharges. 9] 000\ntate Fee oo Œ Remittance Address\nc Total New Charges 417.52\n& Important Messages\ngQ Total Amount Due $1431 27\nPlease pay this amount by 04/31/2020.\nee\nOOOO\nFor questions regarding your dill\ncall customer service at 954-889-6699.\nTime lyBill Customer Name Account Number Invoice Number\nTimelyBill 9999296 1009624\nED\nPayment Detail\nI\nDate Method Reference Amount\n03/18 Wire Wire -5,619.13\nTotal Payments $-5,619.13\nSS\nRecurring Charges\nNn\nQty Services Dates Cost\nNetwork Recovery Fee 1 03/01/20-03/31/20 19.88\nTB-SMART OFFICE 14 03/01/20-03/31/20 286.30\nTB-UC UC Premium 4 03/01/20-03/31/20 50.16\nTB-VP VOICE PLUS 7 03/01/20-03/31/20 61.18\nTotal Recurring Charges $417.52\nPage 3 of 4\nTi melyBill , Customer Name Account Number Invoice Number\n— TimelyBill 9999296 1009624\n— ————““———”—””rs7:-—\nDenver Office\n4207 Burnwood Tri\nDenver, NC 28650\n_.. .. - . H ” =-S-S9ẲÐmỶTm\n———-—tt---E-YECT--r---TT“TST-T“-rRï““r_t\"“_Ƒ_ƑẼtƑ‹ƒ;_c_Ï[][ï[Ï?õcrrr[bÙtỎÖtÙtềnnềtẲiỈi\nSummary of Charges\nNew Charges\nRecurring Charges 417.52\nNon-Recurring Charges 0.00\nCall Charges 0.00\nTaxes and Surcharges 0.00\nTotal New Charges $417.52\n————t-E--E-TXTT-TTrTrrrr-r;ƒmrSl‡TỰmrmrtrr t —\nRecurring Charges\n-_....... -. Ổ Ồ MN , Ợ\nQty Services Dates Cost\nNetwork Recovery Fee 1 03/01/20-03/31/20 19.88\nTB-SMART OFFICE 14 03/01/20-03/31/20 286.30\nTB-UC UC Premium 4 03/01/20-03/31/20 50.16\nTB-VP VOICE PLUS 7 03/01/20-03/31/20 61.18\nTotal Recurring Charges 417.52\nPage 4 of 4",
     "structured_data": {
-      "vendor_name": "Pease detach and relur above porton with your payment",
-      "vendor_address": "—_—<—<—<—_—$ —_——— ae, Recurring Charges - Monthly recurring",
-      "customer_name": "TimelyBill",
-      "customer_address": "Invoice Number: 1009624, Due Date: 08/31/2018",
-      "po_number": "1009624",
+      "vendor_name": "invoice Information important Messages © Recurring Charges - Monthly recurring",
+      "vendor_address": "Account Number 9990295 © charges for service., Irvaice Date 0470172020,",
+      "customer_name": "tal Due: $1,431.27 Our invoices are template based, and can be",
+      "customer_address": "customized to fit the needs of today's, Summary of Charges communications service providers.",
+      "po_number": "9999296",
       "invoice_date": "2018-01-08",
       "due_date": "2018-08-31",
       "subtotal": null,
@@ -527,48 +537,48 @@
       "line_items": []
     },
     "confidence_scores": {
-      "vendor_name": 0.8033333333333332,
-      "vendor_address": 0.8165925925925925,
-      "customer_name": 0.91,
-      "customer_address": 0.9244444444444445,
-      "po_number": 0.9333333333333332,
-      "invoice_date": 0.9166666666666667,
-      "due_date": 0.92,
+      "vendor_name": 0.853,
+      "vendor_address": 0.7848677248677248,
+      "customer_name": 0.9590909090909091,
+      "customer_address": 0.8271204681059415,
+      "po_number": 0.9483333333333333,
+      "invoice_date": 0.96,
+      "due_date": 0.9133333333333333,
       "subtotal": null,
       "tax_amount": 0.9525,
-      "total_amount": 0.96,
+      "total_amount": 0.9590909090909091,
       "line_items": null
     },
     "bounding_boxes": {
       "vendor_name": {
-        "x1": 728,
-        "y1": 1897,
-        "x2": 1002,
-        "y2": 1908
+        "x1": 264,
+        "y1": 1917,
+        "x2": 2266,
+        "y2": 1965
       },
       "vendor_address": {
-        "x1": 258,
-        "y1": 1912,
-        "x2": 2266,
-        "y2": 2113
+        "x1": 267,
+        "y1": 1971,
+        "x2": 2223,
+        "y2": 2088
       },
       "customer_name": {
-        "x1": 290,
-        "y1": 330,
-        "x2": 447,
-        "y2": 366
+        "x1": 132,
+        "y1": 1475,
+        "x2": 2329,
+        "y2": 1540
       },
       "customer_address": {
-        "x1": 291,
-        "y1": 282,
-        "x2": 2471,
-        "y2": 402
+        "x1": 110,
+        "y1": 280,
+        "x2": 2391,
+        "y2": 3199
       },
       "po_number": {
-        "x1": 745,
-        "y1": 174,
-        "x2": 2207,
-        "y2": 227
+        "x1": 108,
+        "y1": 164,
+        "x2": 2458,
+        "y2": 231
       },
       "invoice_date": {
         "x1": 1549,
@@ -577,10 +587,10 @@
         "y2": 269
       },
       "due_date": {
-        "x1": 1549,
+        "x1": 291,
         "y1": 333,
         "x2": 2471,
-        "y2": 367
+        "y2": 402
       },
       "subtotal": null,
       "tax_amount": {
@@ -590,22 +600,22 @@
         "y2": 2251
       },
       "total_amount": {
-        "x1": 268,
-        "y1": 2117,
-        "x2": 826,
-        "y2": 2137
+        "x1": 132,
+        "y1": 1475,
+        "x2": 2329,
+        "y2": 1540
       },
       "line_items": null
     }
   },
   "INV-G-008": {
-    "raw_text": "eS a\nPage1/2 Invoice date (Y-M-D) 2025-06-21\nCANADA POSTES\nCustomer number 1234567\nCANADA\nInvoice number 90000001620\nCustomer ref. 1\nCustomer ref. 2\nContact us\nCLIENT1, CLIENT2 General inquiries | Tracking\nSAMPLE BUSINESS NM 1-866-607-6301\nBARRIE ON LAM 3C2 Questions about your invoice / account\nADDRESS LINE1 : x : :\n1-800-267-7651\ncmg@canadapost.ca\ncanadapost.ca/billing\nSummary of charges\nTotal amount of this invoice $ 1,673.01 Important message\nYour payment is due by (y-M-D) 2025-07-06\nSubtotal GST — HST(page 2) PST/QST Total\nParcels 97.98 97.98\nCommercial/Smartmail Marketing 216.90 216.90\nSpecialized services 1,240.00 1,240.00\nShipments 168.13 168.13\nAdjustments -50.00 -50.00\nTotal 1,673.01 $ 1,673.01\nDiscover the future of ecommerce with exclusive insights straight from\nStay ahead the voices of 5,000 Canadian online shoppers and 755 forward-thinking\nof the curve merchants. Find out what’s next for ecommerce by downloading our\nlatest report at canadapost.ca/ecommercereport\nCanada Post registration nos.: HST/GST 119321495; QST 1006393299\nReturn this slip with your payment\nPOST CARFES Customer number 1234567 Amount due $ 1,673.01\nInvoice number 90000001620 Due date (Y-M-D) 2025-07-06\n15 days from date of invoice. Late payment fees at 18% per annum willbe chargedon Amount paid\nany invoice paid after due date. S\nCANADA POST CORPORATION CLIENT1, CLIENT2\nPAYMENT PROCESSING SAMPLE BUSINESS NM\n2701 RIVERSIDE DR ADDRESS LINE1\nOTTAWA ON K1A 1L7 BARRIE ON L4M 3C2\n00000007276697090000001b2000001b7301 DD1\nPage 2/2 . Invoice date (Y-M-D) 2025-06-21\nCANADA POSTES\nCustomer number 1234567\nCANADA\nInvoice number 90000001620\nCustomer ref. 1\nCustomer ref. 2\nHST details\nTotal HST\nHow to pay your invoice Additional information\nUse one of the following methods of payment: - Invoice discrepancies must be communicated to Canada Post\nwithin 90 days of the invoice date, after which the invoice will\n* preauthorized bank payment;\nbe deemed accepted by you.\n- preauthorized credit card payment, with Canada Post approval;\n* Canada Post reserves the right to charge additional fees;\n- online payment under Manage My Account;\nyou can request the list of them from the Credit\n- cheque or money order payable to Canada Post Corporation;\nManagement Group.\nto ensure payment is applied to your account, provide the\n* Past due invoices are subject to a late payment fee, which is\ninvoice remittance slip with your customer number on the\ncalculated at a rate of 1.5% per month (18% per year);\ncheque or money order.\nCanada Post may amend this rate at any time.\n+ Allinvoices and their payments are in Canadian currency unless\notherwise specified.\nRefer to Customer Guides for details on terms and conditions\n*VE = Volumetric Equivalent of Actual Weight.\nDimensions are presented in centimetres(cm).\nImportant message\nHAVE A GREAT SUMMER!!\nSign up to receive your invoices electronically\nTelephone number\nName\nEmail\nSelect all that apply\n[ PDF - Email notification with a link to your invoice details\nF1. Data - Email notification with invoice details in TXT format\nCO) No printed invoices\n(prime or billing contact only) Signature\nCustomer number 1234567\nCompany name CLIENT1, CLIENT2",
+    "raw_text": "CANADA POSTES Page 1/2 Invoice date (Y-M-D) 2025-06-21\n» Customer number 1234567\nPOST CANADA\nInvoice number 90000001620\nCustomer ref. 1\nCustomer ref. 2\nContact us\nCLIENT1, CLIENT2 General inquiries | tracking\nSAMPLE BUSINESS NM 1-866-607-6301\nADDRESS LINE1 . . .\nBARRIE ON L4M 3C2 Questions about your invoice / account\n1-800-267-7651\ncmg@canadapost.ca\ncanadapost.ca/billing\nSummary of charges\nTotal amount of this invoice $ 1,673.01 Important message\nYour payment is due by ty-M-D) 2025-07-06\nSubtotal GST — _HST(page 2) PST/QST Total\nParcels 97.98 97.98\nCommercial/Smartmail Marketing 216.90 216.90\nSpecialized services 1,240.00 1,240.00\nShipments 168.13 168.13\nAdjustments 50.00 50.00\nTotal 1,673.01 $ 1,673.01\n== N Discover the future of ecommerce with exclusive insights straight from\n.Ư por fd Stay ahead the voices of 5,000 Canadian online shoppers and 755 forward-thinking\ns 4 of the curve merchants. Find out what’s next for ecommerce by downloading our\nx » latest report at canadapost.ca/ecommercereport\nCanada Post registra os HST/GST 1°9327° 496; GST 1996393299\nRetour tap sip 1Ô ÿy2,h pay eit\nPost —⁄ CANADA Customer number 1234567 Amount due $ 1,673.01\nInvoice number 90000001620 Due date (Y-M-D) 2025-07-06\n15 days from date of invoice. Late payment fees at 18% per annum will be chargedon Amount paid\nany invoice paid after due date. S\nCANADA POST CORPORATION CLIENT1, CLIENT2\nPAYMENT PROCESSING SAMPLE BUSINESS NM\n2701 RIVERSIDE DR ADDRESS LINE1\nOTTAWA ON K1A 1L7 BARRIE ON L4M 3C2\n0000000727b697090000001b2000001b7301 O01\nCANADA POSTES Page 2/2. — Invoice date (Y-M-1D) 2025-06-21\n‹ rnu > 1234567\nPOST — CANADA Customer number\nInvoice number 90000001620\nCustomer ref. 1\nCustomer ref. 2\nHST details\nTotal HST\nHow to pay your invoice Additional information\nUse one of the following methods of payment: + Invoice discrepancies must be communicated to Canada Post\n. within 90 days of the invoice date, after which the invoice will\n* preauthorized bank payment; -\n) ) : be deemed accepted by you.\n* preauthorized credit card payment, with Canada Post approval; ˆ\n. * Canada Post reserves the right to charge additional fees;\n- online payment under Manage My Account; .\n, you can request the list of them from the Credit\n* cheque or money order payable to Canada Post Corporation; -\nì ì Management GrOUD.\nto ensure payment is applied to your account, provide the . m . : ,\n, ì s + Past due invoices are subject to a late payment fee, which is\ninvoice remittance slip with your customer number on the s „\ncalculated at a rate of 1.5% per month (18% per year),\ncheque or money order. :\nCanada Post may amend this rate at any time.\n+ Allinvoices and their payments are in Canadian currency unless\notherwise specified.\n* Refer to Customer Guides for details on terms and conditions\n*VE - Volumetric Equivalent of Actual Weight.\nDimensions are presented in centimetres(cm).\nImportant message\nHAVE A GREAT SUMMER!!\nSign up to receive your invoices electronically\nName Telephone number\nEmail\nSelect all that apply\n(PDE - Email notification with a link to your invoice details\n1 Data Email notification with invoice details in TXT format\n[1 No printed invoices\n(prime or billing contact only) Signature\nCustomer number 1234567\nCompany name - CLIENT1, CLIENT2",
     "structured_data": {
-      "vendor_name": "Company name CLIENT1, CLIENT2",
+      "vendor_name": "Company name",
       "vendor_address": null,
       "customer_name": "tal amount of this invoice $ 1,673.01 Important message",
-      "customer_address": "Your payment is due by (y-M-D) 2025-07-06, Subtotal GST — HST(page 2) PST/QST Total",
-      "po_number": "POSTES",
+      "customer_address": "Your payment is due by ty-M-D) 2025-07-06, Subtotal GST — _HST(page 2) PST/QST Total",
+      "po_number": "2025-06-21",
       "invoice_date": "2025-06-21",
       "due_date": "2025-07-06",
       "subtotal": 2.0,
@@ -614,55 +624,55 @@
       "line_items": []
     },
     "confidence_scores": {
-      "vendor_name": 0.365,
+      "vendor_name": 0.99,
       "vendor_address": null,
-      "customer_name": 0.9533333333333333,
-      "customer_address": 0.921477164270598,
-      "po_number": 0.935,
-      "invoice_date": 0.7340000000000001,
-      "due_date": 0.9142857142857143,
-      "subtotal": 0.8785714285714286,
+      "customer_name": 0.9555555555555556,
+      "customer_address": 0.8608859203355002,
+      "po_number": 0.68125,
+      "invoice_date": 0.68125,
+      "due_date": 0.9471428571428571,
+      "subtotal": 0.7414285714285714,
       "tax_amount": null,
-      "total_amount": 0.7944444444444444,
+      "total_amount": 0.99,
       "line_items": null
     },
     "bounding_boxes": {
       "vendor_name": {
-        "x1": 194,
-        "y1": 3122,
-        "x2": 795,
-        "y2": 3166
+        "x1": 151,
+        "y1": 3123,
+        "x2": 404,
+        "y2": 3169
       },
       "vendor_address": null,
       "customer_name": {
         "x1": 259,
-        "y1": 1066,
+        "y1": 1067,
         "x2": 2254,
         "y2": 1137
       },
       "customer_address": {
         "x1": 156,
-        "y1": 155,
+        "y1": 157,
         "x2": 2362,
         "y2": 3126
       },
       "po_number": {
         "x1": 180,
-        "y1": 280,
-        "x2": 654,
+        "y1": 240,
+        "x2": 2302,
         "y2": 310
       },
       "invoice_date": {
-        "x1": 1581,
+        "x1": 180,
         "y1": 240,
         "x2": 2302,
-        "y2": 280
+        "y2": 310
       },
       "due_date": {
         "x1": 261,
         "y1": 1155,
         "x2": 1230,
-        "y2": 1202
+        "y2": 1201
       },
       "subtotal": {
         "x1": 1142,
@@ -672,21 +682,21 @@
       },
       "tax_amount": null,
       "total_amount": {
-        "x1": 299,
-        "y1": 2418,
-        "x2": 2307,
-        "y2": 2464
+        "x1": 2125,
+        "y1": 2428,
+        "x2": 2321,
+        "y2": 2480
       },
       "line_items": null
     }
   },
   "INV-G-009": {
-    "raw_text": "CONTOSO LTD. INVOICE\nContoso Headquarters INVOICE: INV-100\n123 456\" St DATE: 11/15/2019\nNew York, NY, 10001 DUE DATE: 12/15/2019\nCUSTOMER NAME: MICROSOFT CORPORATION\nCUSTOMER ID: CID-12345\nMicrosoft Corp\n123 Other St,\nRedmond WA, 98052\nBILL TO: SHIP TO: SERVICE ADDRESS:\nMicrosoft Finance Microsoft Delivery Microsoft Services\n123 Bill St, 123 Ship St, 123 Service St,\nRedmond WA, 98052 Redmond WA, 98052 Redmond WA, 98052\nSALESPERSON P.O. NUMBER REQUISITIONER SHIPPED VIA F.O.B. POINT TERMS\nPO-3333\nQUANTITY DESCRIPTION UNIT PRICE TOTAL\n1 Test for 23 fields 1 $100.00\nSUBTOTAL $100.00\nSALES TAX $10.00\nTOTAL $110.00\nPREVIOUS BALANCE $500.00\nTOTAL DUE $610.00\nTHANK YOU FOR YOUR BUSINESS!\nREMIT TO:\nContoso Billing\n123 Remit St\nNew York, NY, 10001",
+    "raw_text": "CONTOSO LTD. INVOICE\nContoso Headquarters INVOICE: INV-100\n123 456\" St DATE: 11/15/2019\nNew York, NY, 10001 DUE DATE: 12/15/2019\nCUSTOMER NAME: MICROSOFT CORPORATION\nCUSTOMER ID: CID-12345\nMicrosoft Corp\n123 Other St,\nRedmond WA, 98052\nBILL TO: SHIP TO: SERVICE ADDRESS:\nMicrosoft Finance Microsoft Delivery Microsoft Services\n123 Bill St, 123 Ship St, 123 Service St,\nRedmond WA, 98052 Redmond WA, 98052 Redmond WA, 98052\n| Pto-3333 — ]Ï]\nSUBTOTAL $100.00\nSALES TAX $10.00\nTOTAL $110.00\nPREVIOUS BALANCE $500.00\nTOTAL DUE $610.00\nTHANK YOU FOR YOUR BUSINESS!\nREMIT TO:\nContoso Billing\n123 Remit St\nNew York, NY, 10001",
     "structured_data": {
-      "vendor_name": "Microsoft Corp",
+      "vendor_name": "CUSTOMER NAME: MICROSOFT CORPORATION",
       "vendor_address": null,
-      "customer_name": "SHIP TO: SERVICE ADDRESS:",
-      "customer_address": "Microsoft Finance Microsoft Delivery Microsoft Services, 123 Bill St, 123 Ship St, 123 Service St,",
+      "customer_name": "Microsoft Finance",
+      "customer_address": "123 Bill St,, Redmond WA, 98052",
       "po_number": "CORPORATION",
       "invoice_date": "2019-11-15",
       "due_date": "2019-12-15",
@@ -696,37 +706,37 @@
       "line_items": []
     },
     "confidence_scores": {
-      "vendor_name": 0.96,
+      "vendor_name": 0.99,
       "vendor_address": null,
-      "customer_name": 0.955,
-      "customer_address": 0.955,
+      "customer_name": 0.99,
+      "customer_address": 0.99,
       "po_number": 0.955,
-      "invoice_date": 0.94,
-      "due_date": 0.9542857142857143,
-      "subtotal": 0.96,
-      "tax_amount": 0.9566666666666667,
-      "total_amount": 0.96,
+      "invoice_date": 0.934,
+      "due_date": 0.9571428571428571,
+      "subtotal": 0.99,
+      "tax_amount": 0.99,
+      "total_amount": 0.99,
       "line_items": null
     },
     "bounding_boxes": {
       "vendor_name": {
-        "x1": 178,
-        "y1": 793,
-        "x2": 477,
-        "y2": 836
+        "x1": 1484,
+        "y1": 605,
+        "x2": 2398,
+        "y2": 651
       },
       "vendor_address": null,
       "customer_name": {
-        "x1": 177,
-        "y1": 1189,
-        "x2": 2227,
-        "y2": 1220
+        "x1": 173,
+        "y1": 1247,
+        "x2": 617,
+        "y2": 1419
       },
       "customer_address": {
-        "x1": 178,
-        "y1": 1251,
-        "x2": 2292,
-        "y2": 1558
+        "x1": 173,
+        "y1": 1247,
+        "x2": 617,
+        "y2": 1419
       },
       "po_number": {
         "x1": 1486,
@@ -737,7 +747,7 @@
       "invoice_date": {
         "x1": 178,
         "y1": 482,
-        "x2": 2397,
+        "x2": 2398,
         "y2": 523
       },
       "due_date": {
@@ -747,31 +757,31 @@
         "y2": 590
       },
       "subtotal": {
-        "x1": 1808,
-        "y1": 1987,
-        "x2": 2375,
-        "y2": 2032
+        "x1": 2211,
+        "y1": 1986,
+        "x2": 2387,
+        "y2": 2036
       },
       "tax_amount": {
-        "x1": 1811,
-        "y1": 2076,
-        "x2": 2375,
-        "y2": 2122
+        "x1": 2236,
+        "y1": 2075,
+        "x2": 2387,
+        "y2": 2125
       },
       "total_amount": {
-        "x1": 1790,
-        "y1": 2345,
-        "x2": 2375,
-        "y2": 2390
+        "x1": 2211,
+        "y1": 2344,
+        "x2": 2387,
+        "y2": 2394
       },
       "line_items": null
     }
   },
   "INV-G-010": {
-    "raw_text": "G “iced nvoices\nInvoice Number INV-3337\nFrom:\nDEMO - Sliced Invoices Order Number 12345\nSuite 5A-1204 Invoice Date January 25, 2016\n123 Somewhere Street Due Date January 31, 2016\nYour City AZ 12345 Total D\nadmin @slicedinvoices.com (SEM EIN $93.50\nTo:\nTest Business\n123 Somewhere St\nMelbourne, VIC 3000\ntest@test.com\nHrs/Qty Service Rate/Price Adjust Sub Total\n1.00 | Web Design $85.00 0.00% $85.00\nThis is a sample description...\nSub Total $85.00\nTotal $93.50\nANZ Bank\nACC # 1234 1234\nBSB # 4321 432\nPayment is due within 30 days from date of invoice. Late payment is subject to fees of 5% per month.\nThanks for choosing DEMO - Sliced Invoices | admin @slicedinvoices.com\nPage 1/1",
+    "raw_text": "GS iced mvoices\nFrom:\nDEMO - Sliced Invoices Order Number 12345\nSuite 5A-1204 January 25, 2016\nYour City AZ 12345\n, — m Total Due $93.50\nadmin @slicedinvoices.com\nTo:\nTest Business\n123 Somewhere St\nMelbourne, VIC 3000\ntest@test.com\nWeb Design $85.00 0.00% $85.00\nThis is a sample description.\nSub Total $85.00\n$8.50\nANZ Bank\nACC # 1234 1234\nBSB # 4321 432\nPayment is due within 30 days from date of invoice. Late payment is subject to fees of 5% per month.\nThanks for choosing DEMO - Sliced Invoices | admin@slicedinvoices.com\nPage 1/1",
     "structured_data": {
-      "vendor_name": "Your City AZ 12345 Total D",
-      "vendor_address": "DEMO - Sliced Invoices Order Number 12345, Suite 5A-1204 Invoice Date January 25, 2016",
+      "vendor_name": "Your City AZ 12345",
+      "vendor_address": "DEMO - Sliced Invoices Order Number 12345, Suite 5A-1204 January 25, 2016",
       "customer_name": "Test Business",
       "customer_address": "123 Somewhere St, Melbourne, VIC 3000",
       "po_number": "12345",
@@ -783,30 +793,30 @@
       "line_items": []
     },
     "confidence_scores": {
-      "vendor_name": 0.9433333333333332,
-      "vendor_address": 0.8866160714285715,
-      "customer_name": 0.95,
-      "customer_address": 0.9342091836734694,
-      "po_number": 0.9471428571428571,
-      "invoice_date": 0.9485714285714286,
-      "due_date": 0.95875,
-      "subtotal": 0.9533333333333333,
-      "tax_amount": 0.96,
-      "total_amount": 0.96,
+      "vendor_name": 0.95,
+      "vendor_address": 0.6676785714285715,
+      "customer_name": 0.96,
+      "customer_address": 0.9555620915032679,
+      "po_number": 0.99,
+      "invoice_date": 0.99,
+      "due_date": 0.99,
+      "subtotal": 0.96,
+      "tax_amount": 0.99,
+      "total_amount": 0.99,
       "line_items": null
     },
     "bounding_boxes": {
       "vendor_name": {
-        "x1": 178,
+        "x1": 179,
         "y1": 729,
-        "x2": 1575,
-        "y2": 787
+        "x2": 495,
+        "y2": 764
       },
       "vendor_address": {
         "x1": 178,
-        "y1": 559,
+        "y1": 557,
         "x2": 2165,
-        "y2": 819
+        "y2": 809
       },
       "customer_name": {
         "x1": 177,
@@ -816,58 +826,58 @@
       },
       "customer_address": {
         "x1": 177,
-        "y1": 1082,
-        "x2": 2268,
+        "y1": 227,
+        "x2": 2303,
         "y2": 3365
       },
       "po_number": {
-        "x1": 180,
-        "y1": 559,
-        "x2": 1983,
-        "y2": 609
+        "x1": 1883,
+        "y1": 560,
+        "x2": 1985,
+        "y2": 597
       },
       "invoice_date": {
-        "x1": 179,
-        "y1": 624,
-        "x2": 2165,
+        "x1": 1883,
+        "y1": 626,
+        "x2": 2166,
         "y2": 663
       },
       "due_date": {
-        "x1": 180,
-        "y1": 676,
-        "x2": 2165,
+        "x1": 1883,
+        "y1": 692,
+        "x2": 2166,
         "y2": 729
       },
       "subtotal": {
         "x1": 1657,
-        "y1": 1638,
+        "y1": 1639,
         "x2": 2267,
-        "y2": 1671
+        "y2": 1670
       },
       "tax_amount": {
-        "x1": 1752,
-        "y1": 1705,
-        "x2": 2267,
-        "y2": 1737
+        "x1": 2177,
+        "y1": 1704,
+        "x2": 2269,
+        "y2": 1741
       },
       "total_amount": {
-        "x1": 1725,
-        "y1": 1768,
-        "x2": 2268,
-        "y2": 1813
+        "x1": 1883,
+        "y1": 759,
+        "x2": 1995,
+        "y2": 795
       },
       "line_items": null
     }
   },
   "INV-G-011": {
-    "raw_text": "G Uiced Invoices\nInvoice\n| Invoice Number : INV-3337\nFrom:\nOrder Number 12345\nDEMO - Sliced Invoices\n) ‘l January 25, 2016\nF\n| Invoice Date\nSuite 5A-1204\nJanuary 31, 2016 |\n| Due Date\n123 Somewhere Street\nYour City AZ 12345 lt l ne\nadmin @slicedinvoices.com of ae — …J…_$g3'5…0… See fs\nTo:\nTest Business\n123 Somewhere St\nMelbourne, VIC 3000\ntest@test.com\n| Hrs/aty Service | Rate/Price Adjust | Sub Total |\n-——__—— Sue u n 000 00/0/04.000000027220200 0 ote Pe sao RAS 002028 ee L SRR RES 0292206 Pe 0000000000 22/502/0022020020/205200909208\n| Web Design |\n| 100 This is a sample description... $85.00 0.00% $85.00\n[ ¬ SubTotal | <2 $85.00 |\nL Tax | $8.50\n| Total $93.50 |\nANZ Bank\nACC # 1234 1234\nBSB # 4321 432\nPayment is due within 30 days from date of invoice. Late payment is subject to fees of 5% per month.\nThanks for choosing DEMO - Sliced Invoices | admin @slicedinvoices.com\nPage 1/1",
+    "raw_text": "G iced invoices\nen I Ae ID Ố / 702]\ni Invoice Number INV-3337 ¡\nFrom: ee\nDEMO - Sliced Invoices | Order Number | 12345 —\nSuite 5A-1204 ¡ Invoice Date January 25, 2016 a\n123 Somewhere Street E n I aa 44. 2016 4\n¡„ Due Date | January 31, 2016 Í\nYour City AZ 12345 'Joloue~~S~SC~SSOS~S\nadmin@slicedinvoices.com ¡ TotalDue _ - Í .- _J———\nTo:\nTest Business\n123 Somewhere St\nMelbourne, VIC 3000\ntest@test.com\n| HrletyJì Service | Rate/Price Adjust | Sub Total |\n4.00 | Web Design . $85.00 | 0.00% | $85.00 |\n¡ This is a Sample description.. —_m =_ c L.. .. . I _.. . _\nr—\"\"— —-v sub Total | i G TE\n(SubTotal | $85.00 |\nTax + $8.50 |\n¡ Total | $93.50 |\nANZ Bank\nACC # 1234 1234\nBSB # 4321 432\nPayment is due within 30 days from date of invoice. Late payment is subject to fees of 5% per month.\nThanks for choosing DEMO - Sliced Invoices | admin @slicedinvoices.com\nPage 1/1",
     "structured_data": {
-      "vendor_name": "G Uiced Invoices",
-      "vendor_address": "Invoice, | Invoice Number : INV-3337",
+      "vendor_name": "DEMO - Sliced Invoices | Order Number | 12345 —",
+      "vendor_address": "Suite 5A-1204 ¡ Invoice Date January 25, 2016 a, 123 Somewhere Street E n I aa 44. 2016 4",
       "customer_name": "Test Business",
       "customer_address": "123 Somewhere St, Melbourne, VIC 3000",
       "po_number": "12345",
-      "invoice_date": null,
+      "invoice_date": "2016-01-25",
       "due_date": "2016-01-31",
       "subtotal": 85.0,
       "tax_amount": 8.5,
@@ -875,117 +885,30 @@
       "line_items": []
     },
     "confidence_scores": {
-      "vendor_name": 0.33,
-      "vendor_address": 0.8906666666666666,
-      "customer_name": 0.96,
-      "customer_address": 0.8362678571428572,
-      "po_number": 0.9466666666666668,
-      "invoice_date": null,
-      "due_date": 0.85,
-      "subtotal": 0.5742857142857143,
-      "tax_amount": 0.7825,
-      "total_amount": 0.8575,
+      "vendor_name": 0.5660000000000001,
+      "vendor_address": 0.7250555555555556,
+      "customer_name": 0.925,
+      "customer_address": 0.7160852272727273,
+      "po_number": 0.99,
+      "invoice_date": 0.99,
+      "due_date": 0.99,
+      "subtotal": 0.4225,
+      "tax_amount": 0.8275,
+      "total_amount": 0.99,
       "line_items": null
     },
     "bounding_boxes": {
       "vendor_name": {
-        "x1": 182,
-        "y1": 129,
-        "x2": 809,
-        "y2": 242
+        "x1": 189,
+        "y1": 555,
+        "x2": 2312,
+        "y2": 645
       },
       "vendor_address": {
-        "x1": 188,
-        "y1": 236,
-        "x2": 2305,
-        "y2": 601
-      },
-      "customer_name": {
-        "x1": 192,
-        "y1": 1060,
-        "x2": 421,
-        "y2": 1089
-      },
-      "customer_address": {
-        "x1": 194,
-        "y1": 1111,
-        "x2": 2329,
-        "y2": 3397
-      },
-      "po_number": {
-        "x1": 1461,
-        "y1": 571,
-        "x2": 1992,
-        "y2": 605
-      },
-      "invoice_date": null,
-      "due_date": {
-        "x1": 1893,
-        "y1": 678,
+        "x1": 189,
+        "y1": 601,
         "x2": 2313,
-        "y2": 737
-      },
-      "subtotal": {
-        "x1": 1440,
-        "y1": 1624,
-        "x2": 2327,
-        "y2": 1715
-      },
-      "tax_amount": {
-        "x1": 1441,
-        "y1": 1708,
-        "x2": 2292,
-        "y2": 1780
-      },
-      "total_amount": {
-        "x1": 1443,
-        "y1": 1716,
-        "x2": 2329,
-        "y2": 1835
-      },
-      "line_items": null
-    }
-  },
-  "INV-G-012": {
-    "raw_text": "G icedmvotces\nInvoice\n[ee oo E\nInvoice Number INV-3337\n[oes ee Se n\nFrom:\n| Order Number 12345\nDEMO - Sliced Invoices\nInvoice Date | January 25, 2016\nSuite 5A-1204\n123 Somewhere Street\nDue Date\n| Total Due | $93.50 |\nYour City AZ 12345\nadmin @slicedinvoices.com\nTo:\nTest Business\n123 Somewhere St\nMelbourne, VIC 3000\ntest@test.com\nHrs/Qty Service\n= EE\n| 4.00 | Web Design\nThis is a sample description...\nANZ Bank\nACC # 1234 1234\nBSB # 4321 432\nPayment is due within 30 days from date of invoice. Late payment is subject to fees of 5% per month.\nThanks for choosing DEMO - Sliced Invoices | admin @slicedinvoices.com\nPage 1/1",
-    "structured_data": {
-      "vendor_name": "G icedmvotces",
-      "vendor_address": "Invoice, [ee oo E",
-      "customer_name": "Test Business",
-      "customer_address": "123 Somewhere St, Melbourne, VIC 3000",
-      "po_number": "12345",
-      "invoice_date": "2016-01-25",
-      "due_date": null,
-      "subtotal": 85.0,
-      "tax_amount": 8.5,
-      "total_amount": 93.5,
-      "line_items": []
-    },
-    "confidence_scores": {
-      "vendor_name": 0.075,
-      "vendor_address": 0.7055555555555557,
-      "customer_name": 0.96,
-      "customer_address": 0.894448717948718,
-      "po_number": 0.93,
-      "invoice_date": 0.94,
-      "due_date": null,
-      "subtotal": 0.475,
-      "tax_amount": 0.5575,
-      "total_amount": 0.855,
-      "line_items": null
-    },
-    "bounding_boxes": {
-      "vendor_name": {
-        "x1": 181,
-        "y1": 138,
-        "x2": 806,
-        "y2": 230
-      },
-      "vendor_address": {
-        "x1": 1424,
-        "y1": 236,
-        "x2": 2305,
-        "y2": 538
+        "y2": 736
       },
       "customer_name": {
         "x1": 192,
@@ -996,39 +919,136 @@
       "customer_address": {
         "x1": 194,
         "y1": 1111,
-        "x2": 1861,
-        "y2": 3397
+        "x2": 2330,
+        "y2": 1723
       },
       "po_number": {
-        "x1": 1426,
-        "y1": 571,
-        "x2": 1992,
-        "y2": 642
+        "x1": 1921,
+        "y1": 566,
+        "x2": 2025,
+        "y2": 603
       },
       "invoice_date": {
-        "x1": 1464,
-        "y1": 622,
-        "x2": 2174,
-        "y2": 671
+        "x1": 1921,
+        "y1": 633,
+        "x2": 2210,
+        "y2": 670
       },
-      "due_date": null,
+      "due_date": {
+        "x1": 1921,
+        "y1": 699,
+        "x2": 2210,
+        "y2": 736
+      },
       "subtotal": {
-        "x1": 1440,
-        "y1": 1625,
-        "x2": 2327,
-        "y2": 1700
+        "x1": 1442,
+        "y1": 1630,
+        "x2": 2330,
+        "y2": 1723
       },
       "tax_amount": {
         "x1": 1775,
-        "y1": 1697,
-        "x2": 2328,
-        "y2": 1756
+        "y1": 1699,
+        "x2": 2327,
+        "y2": 1791
       },
       "total_amount": {
-        "x1": 1429,
-        "y1": 717,
+        "x1": 1921,
+        "y1": 766,
+        "x2": 2035,
+        "y2": 803
+      },
+      "line_items": null
+    }
+  },
+  "INV-G-012": {
+    "raw_text": "6 ced mvoices\nPo rr nr T T Ừ nr a\n| Invoice Number | INV-3337 '\nFrom: |_Invoice Number |\n. i\nDEMO - Sliced Invoices ¡ Order Number - | 123450\nSuite 5A-1204 ¡ Invoice Date | January 25, 2016 |\n1L —._...!nt TC nƒ—xr—-— — .._..._ỷ..... ete ee eee nee cern U of\n123 Somewhere Street | Due Date | January 31, 2016\nYour City AZ 12345 Total be es Sr |\nadmin @slicedinvoices.com ¡ Total Due II 239350 II Ij\nTo:\nTest Business\n123 Somewhere St\nMelbourne, VIC 3000\ntest@test.com\n¡ Hrs/Qty | Service | Rate/Price Adjust | Sub Total |\n| | Web Design 1 |\nSub Total | $85.00 |\n¡ Total | $93.50 |\nANZ Bank\nACC # 1234 1234\nBSB # 4321 432\nPayment is due within 30 days from date of invoice. Late payment is subject to fees of 5% per month.\nThanks for choosing DEMO - Sliced Invoices | admin @slicedinvoices.com\nPage 1/1",
+    "structured_data": {
+      "vendor_name": "|_Invoice Number |",
+      "vendor_address": ". i, DEMO - Sliced Invoices ¡ Order Number - | 123450",
+      "customer_name": "Test Business",
+      "customer_address": "123 Somewhere St, Melbourne, VIC 3000",
+      "po_number": "12345",
+      "invoice_date": "2016-01-25",
+      "due_date": "2016-01-31",
+      "subtotal": 85.0,
+      "tax_amount": 8.5,
+      "total_amount": 93.5,
+      "line_items": []
+    },
+    "confidence_scores": {
+      "vendor_name": 0.7075,
+      "vendor_address": 0.685993894993895,
+      "customer_name": 0.915,
+      "customer_address": 0.9189447415329768,
+      "po_number": 0.99,
+      "invoice_date": 0.99,
+      "due_date": 0.99,
+      "subtotal": 0.8220000000000001,
+      "tax_amount": 0.99,
+      "total_amount": 0.99,
+      "line_items": null
+    },
+    "bounding_boxes": {
+      "vendor_name": {
+        "x1": 188,
+        "y1": 511,
+        "x2": 1802,
+        "y2": 580
+      },
+      "vendor_address": {
+        "x1": 189,
+        "y1": 561,
         "x2": 2315,
-        "y2": 819
+        "y2": 850
+      },
+      "customer_name": {
+        "x1": 192,
+        "y1": 1061,
+        "x2": 421,
+        "y2": 1089
+      },
+      "customer_address": {
+        "x1": 180,
+        "y1": 229,
+        "x2": 2350,
+        "y2": 3400
+      },
+      "po_number": {
+        "x1": 1921,
+        "y1": 566,
+        "x2": 2025,
+        "y2": 603
+      },
+      "invoice_date": {
+        "x1": 1921,
+        "y1": 633,
+        "x2": 2210,
+        "y2": 670
+      },
+      "due_date": {
+        "x1": 1921,
+        "y1": 699,
+        "x2": 2210,
+        "y2": 736
+      },
+      "subtotal": {
+        "x1": 1681,
+        "y1": 1641,
+        "x2": 2327,
+        "y2": 1715
+      },
+      "tax_amount": {
+        "x1": 2221,
+        "y1": 1722,
+        "x2": 2315,
+        "y2": 1759
+      },
+      "total_amount": {
+        "x1": 1921,
+        "y1": 766,
+        "x2": 2035,
+        "y2": 803
       },
       "line_items": null
     }

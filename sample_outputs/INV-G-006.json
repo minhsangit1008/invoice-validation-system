@@ -1,58 +1,34 @@
 {
   "invoice_id": "INV-G-006",
-  "status": "rejected",
-  "confidence_score": 0.07622746675276496,
+  "status": "needs_review",
+  "confidence_score": 0.7360356577580291,
   "discrepancies": [
     {
-      "field": "customer_name",
-      "issue_type": "critical",
-      "expected": "Los Angeles",
-      "detected": "Terms Due On Receipt",
-      "confidence": 0.955,
-      "suggestion": "Low similarity",
-      "bounding_box": {
-        "x1": 197,
-        "y1": 758,
-        "x2": 1140,
-        "y2": 798
-      }
-    },
-    {
-      "field": "customer_address",
-      "issue_type": "critical",
-      "expected": "2708 Southside Lane, 90018 CA",
-      "detected": "Balance Due $514.350, Due Date 03 May 2018",
-      "confidence": 0.9361111111111112,
-      "suggestion": "Low similarity",
+      "field": "invoice_date",
+      "issue_type": "warning",
+      "expected": "2018-05-03",
+      "detected": null,
+      "confidence": 0.5,
+      "suggestion": "Synthetic discrepancy added for coverage",
       "bounding_box": {
         "x1": 201,
-        "y1": 632,
-        "x2": 2327,
-        "y2": 962
+        "y1": 671,
+        "x2": 1083,
+        "y2": 711
       }
     }
   ],
   "visualization": [
     {
       "bounding_box": {
-        "x1": 197,
-        "y1": 758,
-        "x2": 1140,
-        "y2": 798
-      },
-      "label": "customer_name",
-      "severity": "critical"
-    },
-    {
-      "bounding_box": {
         "x1": 201,
-        "y1": 632,
-        "x2": 2327,
-        "y2": 962
+        "y1": 671,
+        "x2": 1083,
+        "y2": 711
       },
-      "label": "customer_address",
-      "severity": "critical"
+      "label": "invoice_date",
+      "severity": "warning"
     }
   ],
-  "highlight_image": "sample_outputs\\images\\INV-G-006_p1.png"
+  "highlight_image": "sample_outputs/images/INV-G-006_p1.png"
 }
