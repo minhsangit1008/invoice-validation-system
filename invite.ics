@@ -1,0 +1,132 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 16.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:REQUEST
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VTIMEZONE
+TZID:SE Asia Standard Time
+BEGIN:STANDARD
+DTSTART:16010101T000000
+TZOFFSETFROM:+0700
+TZOFFSETTO:+0700
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+ATTENDEE;CN=arun@suritechs.com;RSVP=TRUE:mailto:arun@suritechs.com
+ATTENDEE;CN="Loc Nguyen";RSVP=TRUE:mailto:loc.nguyen@suritechs.com
+ATTENDEE;CN=duy.vy@suritechs.com;RSVP=TRUE:mailto:duy.vy@suritechs.com
+ATTENDEE;CN=minhsang10082002@gmail.com;RSVP=TRUE:mailto:minhsang10082002@gm
+	ail.com
+CLASS:PUBLIC
+CREATED:20260107T054135Z
+DESCRIPTION:Dear all\, \n\nLink meeting for tonight at 19h for test demo. \
+	n\n \n\n__________________________________________________________________
+	______________\n\nMicrosoft Teams Need help? <https://aka.ms/JoinTeamsMeet
+	ing?omkt=en-US>  \n\nJoin the meeting now <https://teams.microsoft.com/l/m
+	eetup-join/19%3ameeting_N2M5NTY4YjEtODk1Yy00YTYxLTg0OTEtNDI4MTE5NzcwOTMz%4
+	0thread.v2/0?context=%7b%22Tid%22%3a%223cc9d0dc-9d41-4153-aa9e-06b7ff26a3d
+	9%22%2c%22Oid%22%3a%22db2ab3fa-0543-4904-a081-ec76b6a5dfe9%22%7d>  \n\nMee
+	ting ID: 445 843 262 026 11 \n\nPasscode: FG9WB3FF \n\n___________________
+	_____________\n\nFor organizers: Meeting options <https://teams.microsoft.
+	com/meetingOptions/?organizerId=db2ab3fa-0543-4904-a081-ec76b6a5dfe9&tenan
+	tId=3cc9d0dc-9d41-4153-aa9e-06b7ff26a3d9&threadId=19_meeting_N2M5NTY4YjEtO
+	Dk1Yy00YTYxLTg0OTEtNDI4MTE5NzcwOTMz@thread.v2&messageId=0&language=en-US> 
+	 \n\n_____________________________________________________________________
+	___________\n\n \n\n
+DTEND;TZID="SE Asia Standard Time":20260107T200000
+DTSTAMP:20260107T054135Z
+DTSTART;TZID="SE Asia Standard Time":20260107T190000
+LAST-MODIFIED:20260107T054135Z
+LOCATION:Microsoft Teams Meeting
+ORGANIZER;CN=tram@suritechs.com:mailto:tram@suritechs.com
+PRIORITY:5
+SEQUENCE:0
+SUMMARY;LANGUAGE=en-us:Meeting Demo Test New Candidate AI
+TRANSP:OPAQUE
+UID:040000008200E00074C5B7101A82E00800000000203B8CA6D27FDC01000000000000000
+	01000000009E94F7F9A49B84BB2EA3F27F06A3177
+X-ALT-DESC;FMTTYPE=text/html:<html xmlns:v="urn:schemas-microsoft-com:vml" 
+	xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-mic
+	rosoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/
+	12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head><meta http-equiv=Co
+	ntent-Type content="text/html\; charset=us-ascii"><meta name=Generator con
+	tent="Microsoft Word 15 (filtered medium)"><!--[if !mso]><style>v\\:* {beh
+	avior:url(#default#VML)\;}\no\\:* {behavior:url(#default#VML)\;}\nw\\:* {b
+	ehavior:url(#default#VML)\;}\n.shape {behavior:url(#default#VML)\;}\n</sty
+	le><![endif]--><style><!--\n/* Font Definitions */\n@font-face\n	{font-fam
+	ily:"Cambria Math"\;\n	panose-1:2 4 5 3 5 4 6 3 2 4\;}\n@font-face\n	{font
+	-family:Aptos\;}\n@font-face\n	{font-family:"Segoe UI"\;\n	panose-1:2 11 5
+	 2 4 2 4 2 2 3\;}\n/* Style Definitions */\np.MsoNormal\, li.MsoNormal\, d
+	iv.MsoNormal\n	{margin:0in\;\n	font-size:12.0pt\;\n	font-family:"Aptos"\,s
+	ans-serif\;\n	mso-ligatures:standardcontextual\;}\na:link\, span.MsoHyperl
+	ink\n	{mso-style-priority:99\;\n	color:#467886\;\n	text-decoration:underli
+	ne\;}\nspan.me-email-text\n	{mso-style-name:me-email-text\;}\nspan.me-emai
+	l-text-secondary\n	{mso-style-name:me-email-text-secondary\;}\nspan.EmailS
+	tyle20\n	{mso-style-type:personal-compose\;}\n.MsoChpDefault\n	{mso-style-
+	type:export-only\;\n	font-size:10.0pt\;\n	mso-ligatures:none\;}\n@page Wor
+	dSection1\n	{size:8.5in 11.0in\;\n	margin:1.0in 1.0in 1.0in 1.0in\;}\ndiv.
+	WordSection1\n	{page:WordSection1\;}\n--></style></head><body lang=EN-US l
+	ink="#467886" vlink="#96607D" style='word-wrap:break-word'><div class=Word
+	Section1><p class=MsoNormal><span style='font-size:11.0pt'>Dear all\, <o:p
+	></o:p></span></p><p class=MsoNormal><span style='font-size:11.0pt'>Link m
+	eeting for tonight at 19h for test demo. <o:p></o:p></span></p><p class=Ms
+	oNormal><span style='font-size:11.0pt'><o:p>&nbsp\;</o:p></span></p><div><
+	div style='margin-bottom:.25in\;overflow:hidden'><p class=MsoNormal><span 
+	style='font-family:"Segoe UI"\,sans-serif\;color:#242424'>________________
+	________________________________________________________________</span><sp
+	an style='font-family:"Segoe UI"\,sans-serif\;color:#242424\;mso-ligatures
+	:none'><o:p></o:p></span></p></div><div style='margin-bottom:9.0pt'><p cla
+	ss=MsoNormal><span class=me-email-text><b><span style='font-size:18.0pt\;f
+	ont-family:"Segoe UI"\,sans-serif\;color:#242424'>Microsoft Teams</span></
+	b></span><span style='font-family:"Segoe UI"\,sans-serif\;color:#242424'> 
+	<a href="https://aka.ms/JoinTeamsMeeting?omkt=en-US"><span style='font-siz
+	e:10.5pt\;color:#5B5FC7'>Need help?</span></a> <o:p></o:p></span></p></div
+	><div style='margin-bottom:4.5pt'><p class=MsoNormal><span style='font-fam
+	ily:"Segoe UI"\,sans-serif\;color:#242424'><a href="https://teams.microsof
+	t.com/l/meetup-join/19%3ameeting_N2M5NTY4YjEtODk1Yy00YTYxLTg0OTEtNDI4MTE5N
+	zcwOTMz%40thread.v2/0?context=%7b%22Tid%22%3a%223cc9d0dc-9d41-4153-aa9e-06
+	b7ff26a3d9%22%2c%22Oid%22%3a%22db2ab3fa-0543-4904-a081-ec76b6a5dfe9%22%7d"
+	 target="_blank" title="Meeting join link"><b><span style='font-size:15.0p
+	t\;color:#5B5FC7'>Join the meeting now</span></b></a> <o:p></o:p></span></
+	p></div><div style='margin-bottom:4.5pt'><p class=MsoNormal><span class=me
+	-email-text-secondary><span style='font-size:10.5pt\;font-family:"Segoe UI
+	"\,sans-serif\;color:#616161'>Meeting ID: </span></span><span class=me-ema
+	il-text><span style='font-size:10.5pt\;font-family:"Segoe UI"\,sans-serif\
+	;color:#242424'>445 843 262 026 11</span></span><span style='font-family:"
+	Segoe UI"\,sans-serif\;color:#242424'> <o:p></o:p></span></p></div><div st
+	yle='margin-bottom:24.0pt'><p class=MsoNormal><span class=me-email-text-se
+	condary><span style='font-size:10.5pt\;font-family:"Segoe UI"\,sans-serif\
+	;color:#616161'>Passcode: </span></span><span class=me-email-text><span st
+	yle='font-size:10.5pt\;font-family:"Segoe UI"\,sans-serif\;color:#242424'>
+	FG9WB3FF</span></span><span style='font-family:"Segoe UI"\,sans-serif\;col
+	or:#242424'> <o:p></o:p></span></p></div><div style='margin-bottom:9.0pt'>
+	<div class=MsoNormal align=center style='text-align:center'><span style='f
+	ont-family:"Segoe UI"\,sans-serif\;color:#242424'><hr size=1 width="100%" 
+	align=center></span></div></div><div><p class=MsoNormal><span class=me-ema
+	il-text-secondary><span style='font-size:10.5pt\;font-family:"Segoe UI"\,s
+	ans-serif\;color:#616161'>For organizers: </span></span><span style='font-
+	family:"Segoe UI"\,sans-serif\;color:#242424'><a href="https://teams.micro
+	soft.com/meetingOptions/?organizerId=db2ab3fa-0543-4904-a081-ec76b6a5dfe9&
+	amp\;tenantId=3cc9d0dc-9d41-4153-aa9e-06b7ff26a3d9&amp\;threadId=19_meetin
+	g_N2M5NTY4YjEtODk1Yy00YTYxLTg0OTEtNDI4MTE5NzcwOTMz@thread.v2&amp\;messageI
+	d=0&amp\;language=en-US" target="_blank"><span style='font-size:10.5pt\;co
+	lor:#5B5FC7'>Meeting options</span></a> <o:p></o:p></span></p></div><div s
+	tyle='margin-bottom:.25in\;overflow:hidden'><p class=MsoNormal><span style
+	='font-family:"Segoe UI"\,sans-serif\;color:#242424'>_____________________
+	___________________________________________________________<o:p></o:p></sp
+	an></p></div></div><p class=MsoNormal><span style='font-size:11.0pt'><o:p>
+	&nbsp\;</o:p></span></p></div></body></html>
+X-MICROSOFT-CDO-BUSYSTATUS:TENTATIVE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MS-OLK-AUTOSTARTCHECK:FALSE
+X-MS-OLK-CONFTYPE:0
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
+

@@ -8,7 +8,7 @@ if str(ROOT_DIR) not in sys.path:
 
 from src.io.loader import load_all, ground_truth_map
 from src.ml.train import load_model
-from src.output.visualize import generate_visual_feedback
+from src.output.visualize import generate_visual_feedback, render_highlight_image
 from src.rules.validation import validate_invoice
 
 
@@ -23,6 +23,9 @@ def main(data_dir="data", model_path="models/logreg.pkl", out_dir="sample_output
 
     out_path = Path(out_dir)
     out_path.mkdir(exist_ok=True)
+    image_out = out_path / "images"
+    image_out.mkdir(exist_ok=True)
+    rendered_dir = Path(data_dir) / "rendered_pages"
 
     for inv_id, ocr_data in ocr_results.items():
         gt = gt_map.get(inv_id)
@@ -30,6 +33,11 @@ def main(data_dir="data", model_path="models/logreg.pkl", out_dir="sample_output
             continue
         result = validate_invoice(ocr_data, gt, database, model_bundle)
         visual = generate_visual_feedback(result["discrepancies"])
+        highlight_path = None
+        image_path = rendered_dir / f"{inv_id}_p1.png"
+        if image_path.exists():
+            highlight_path = image_out / f"{inv_id}_p1.png"
+            render_highlight_image(image_path, result["discrepancies"], highlight_path)
 
         payload = {
             "invoice_id": inv_id,
@@ -37,6 +45,7 @@ def main(data_dir="data", model_path="models/logreg.pkl", out_dir="sample_output
             "confidence_score": result["confidence_score"],
             "discrepancies": result["discrepancies"],
             "visualization": visual,
+            "highlight_image": str(highlight_path) if highlight_path else None,
         }
 
         output_file = out_path / f"{inv_id}.json"

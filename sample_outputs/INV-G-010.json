@@ -1,0 +1,8 @@
+{
+  "invoice_id": "INV-G-010",
+  "status": "approved",
+  "confidence_score": 0.8125268775571678,
+  "discrepancies": [],
+  "visualization": [],
+  "highlight_image": "sample_outputs\\images\\INV-G-010_p1.png"
+}

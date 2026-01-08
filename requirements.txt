@@ -5,3 +5,8 @@ rapidfuzz
 python-dateutil
 pytest
 matplotlib
+pypdf
+pytesseract
+pymupdf
+pillow
+python-docx

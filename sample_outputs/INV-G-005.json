@@ -1,0 +1,82 @@
+{
+  "invoice_id": "INV-G-005",
+  "status": "rejected",
+  "confidence_score": 0.07224647577798299,
+  "discrepancies": [
+    {
+      "field": "customer_name",
+      "issue_type": "critical",
+      "expected": "Rob & Joe Traders",
+      "detected": "tal",
+      "confidence": 0.96,
+      "suggestion": "Low similarity",
+      "bounding_box": {
+        "x1": 1820,
+        "y1": 2281,
+        "x2": 1913,
+        "y2": 2311
+      }
+    },
+    {
+      "field": "customer_address",
+      "issue_type": "critical",
+      "expected": "2708 Southside Lane, Los Angeles",
+      "detected": "(-) 100.000, Payment Made",
+      "confidence": 0.9012083333333333,
+      "suggestion": "Low similarity",
+      "bounding_box": {
+        "x1": 230,
+        "y1": 2389,
+        "x2": 2340,
+        "y2": 3446
+      }
+    },
+    {
+      "field": "tax_amount",
+      "issue_type": "critical",
+      "expected": 11750.0,
+      "detected": 4.7,
+      "confidence": 0.91,
+      "suggestion": "Amount mismatch",
+      "bounding_box": {
+        "x1": 1555,
+        "y1": 2058,
+        "x2": 1911,
+        "y2": 2098
+      }
+    }
+  ],
+  "visualization": [
+    {
+      "bounding_box": {
+        "x1": 1820,
+        "y1": 2281,
+        "x2": 1913,
+        "y2": 2311
+      },
+      "label": "customer_name",
+      "severity": "critical"
+    },
+    {
+      "bounding_box": {
+        "x1": 230,
+        "y1": 2389,
+        "x2": 2340,
+        "y2": 3446
+      },
+      "label": "customer_address",
+      "severity": "critical"
+    },
+    {
+      "bounding_box": {
+        "x1": 1555,
+        "y1": 2058,
+        "x2": 1911,
+        "y2": 2098
+      },
+      "label": "tax_amount",
+      "severity": "critical"
+    }
+  ],
+  "highlight_image": "sample_outputs\\images\\INV-G-005_p1.png"
+}

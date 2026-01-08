@@ -1,0 +1,13 @@
+invoice_id,url,language,source_name,notes,pages,text_len,is_pdf,download_ok,error,local_path
+INV-G-001,https://slicedinvoices.com/pdf/wordpress-pdf-invoice-plugin-sample.pdf,EN,SlicedInvoices sample,filled data,1,677,True,True,,data\raw_pdfs\INV-G-001.pdf
+INV-G-002,https://raw.githubusercontent.com/Azure-Samples/cognitive-services-REST-api-samples/master/curl/form-recognizer/Invoice-6.pdf,EN,Azure sample invoice 6,filled data,1,551,True,True,,data\raw_pdfs\INV-G-002.pdf
+INV-G-003,https://raw.githubusercontent.com/Azure-Samples/document-intelligence-code-samples/main/Data/invoice/invoice.pdf,EN,Azure document intelligence invoice,filled data,1,1012,True,True,,data\raw_pdfs\INV-G-003.pdf
+INV-G-004,https://raw.githubusercontent.com/Azure-Samples/cognitive-services-REST-api-samples/master/curl/form-recognizer/rest-api/invoice.pdf,EN,Azure sample invoice (REST),filled data,1,1012,True,True,,data\raw_pdfs\INV-G-004.pdf
+INV-G-005,https://www.zoho.com/invoice/invoice-templates/sample/zoho-invoice-standard-template.pdf,EN,Zoho invoice standard,filled data,1,945,True,True,,data\raw_pdfs\INV-G-005.pdf
+INV-G-006,https://www.zoho.com/invoice/invoice-templates/sample/zoho-invoice-minimalist-template.pdf,EN,Zoho invoice minimalist,filled data,1,828,True,True,,data\raw_pdfs\INV-G-006.pdf
+INV-G-007,https://timelybill.com/pdf/sample-voip-invoice.pdf,EN,TimelyBill sample invoice,filled data,4,4782,True,True,,data\raw_pdfs\INV-G-007.pdf
+INV-G-008,https://www.canadapost-postescanada.ca/cpc/doc/en/postal-services/sample-pdf-invoice.pdf,EN,Canada Post sample invoice,filled data,2,2878,True,True,,data\raw_pdfs\INV-G-008.pdf
+INV-G-009,https://raw.githubusercontent.com/Azure-Samples/cognitive-services-REST-api-samples/master/curl/form-recognizer/sample-invoice.pdf,EN,Azure sample invoice,filled data,1,844,True,True,,data\raw_pdfs\INV-G-009.pdf
+INV-G-010,https://raw.githubusercontent.com/aws-samples/amazon-textract-textractor/master/tests/invoice_sample.pdf,EN,AWS Textract invoice sample,filled data,1,677,True,True,,data\raw_pdfs\INV-G-010.pdf
+INV-G-011,https://raw.githubusercontent.com/aws-samples/amazon-textract-textractor/master/tests/fixtures/sample-invoice.pdf,EN,AWS Textract sample invoice,filled data,1,677,True,True,,data\raw_pdfs\INV-G-011.pdf
+INV-G-012,https://slicedinvoices.com/pdf/wordpress-pdf-invoice-plugin-sample.pdf,EN,SlicedInvoices sample (duplicate),filled data,1,677,True,True,,data\raw_pdfs\INV-G-012.pdf

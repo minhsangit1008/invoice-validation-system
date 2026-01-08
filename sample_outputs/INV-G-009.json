@@ -1,0 +1,58 @@
+{
+  "invoice_id": "INV-G-009",
+  "status": "rejected",
+  "confidence_score": 0.08509081031098238,
+  "discrepancies": [
+    {
+      "field": "customer_name",
+      "issue_type": "critical",
+      "expected": "Microsoft Finance",
+      "detected": "SHIP TO: SERVICE ADDRESS:",
+      "confidence": 0.955,
+      "suggestion": "Low similarity",
+      "bounding_box": {
+        "x1": 177,
+        "y1": 1189,
+        "x2": 2227,
+        "y2": 1220
+      }
+    },
+    {
+      "field": "customer_address",
+      "issue_type": "critical",
+      "expected": "123 Bill St,, Redmond WA, 98052",
+      "detected": "Microsoft Finance Microsoft Delivery Microsoft Services, 123 Bill St, 123 Ship St, 123 Service St,",
+      "confidence": 0.955,
+      "suggestion": "Low similarity",
+      "bounding_box": {
+        "x1": 178,
+        "y1": 1251,
+        "x2": 2292,
+        "y2": 1558
+      }
+    }
+  ],
+  "visualization": [
+    {
+      "bounding_box": {
+        "x1": 177,
+        "y1": 1189,
+        "x2": 2227,
+        "y2": 1220
+      },
+      "label": "customer_name",
+      "severity": "critical"
+    },
+    {
+      "bounding_box": {
+        "x1": 178,
+        "y1": 1251,
+        "x2": 2292,
+        "y2": 1558
+      },
+      "label": "customer_address",
+      "severity": "critical"
+    }
+  ],
+  "highlight_image": "sample_outputs\\images\\INV-G-009_p1.png"
+}

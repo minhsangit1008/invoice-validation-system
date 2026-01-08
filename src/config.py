@@ -1,3 +1,5 @@
+from pathlib import Path
+
 FUZZY_PASS = 0.90
 FUZZY_WARN = 0.80
 
@@ -74,7 +76,30 @@ SEVERITY_PENALTY = {
 }
 
 CONFIDENCE_REVIEW_THRESHOLD = 0.75
-STATUS_ON_CRITICAL = "needs_review"
+STATUS_ON_CRITICAL = "rejected"
 
 NAME_TRUNCATE_RATIO = 0.50
 NAME_TRUNCATE_MIN_LEN = 4
+
+ROOT_DIR = Path(__file__).resolve().parents[1]
+DATA_DIR = ROOT_DIR / "data"
+RAW_PDF_DIR = DATA_DIR / "raw_pdfs"
+RENDERED_DIR = DATA_DIR / "rendered_pages"
+OCR_RAW_PATH = ROOT_DIR / "outputs" / "ocr_raw.json"
+
+_DEFAULT_TESSERACT = Path(r"C:\Program Files\Tesseract-OCR\tesseract.exe")
+TESSERACT_CMD = _DEFAULT_TESSERACT if _DEFAULT_TESSERACT.exists() else None
+TESSDATA_DIR = DATA_DIR / "tessdata"
+OCR_DPI = 300
+OCR_LANGS = "eng+vie"
+
+SIMULATE_SCAN_IDS = {
+    "INV-G-001",
+    "INV-G-002",
+    "INV-G-004",
+    "INV-G-005",
+    "INV-G-007",
+    "INV-G-008",
+    "INV-G-011",
+    "INV-G-012",
+}

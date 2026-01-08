@@ -249,6 +249,8 @@ def _check_id_field(field, expected, detected, conf, bboxes, discrepancies):
     detected_norm = ocr_confusion_normalize(detected)
     if expected is None and detected is None:
         return
+    if expected is None:
+        return
     if expected_norm == detected_norm:
         if str(expected).strip() != str(detected).strip():
             discrepancies.append(
@@ -262,6 +264,19 @@ def _check_id_field(field, expected, detected, conf, bboxes, discrepancies):
                     bboxes.get(field),
                 )
             )
+        return
+    if detected_norm and detected_norm.rstrip("0") == expected_norm:
+        discrepancies.append(
+            build_discrepancy(
+                field,
+                "warning",
+                expected,
+                detected,
+                conf or 0.8,
+                "Possible trailing zero from OCR",
+                bboxes.get(field),
+            )
+        )
         return
     discrepancies.append(
         build_discrepancy(
@@ -290,6 +305,10 @@ def _check_fuzzy_field(
     allow_truncate=False,
     missing_severity="critical",
 ):
+    if expected is None and detected is None:
+        return
+    if expected is None:
+        return
     expected_norm = normalizer(expected) if expected is not None else ""
     detected_norm = normalizer(detected) if detected is not None else ""
     if expected_norm and not detected_norm:
@@ -364,6 +383,10 @@ def _is_truncated_match(expected_norm, detected_norm):
 
 
 def _check_date_field(field, expected, detected, conf, bboxes, discrepancies, date_diffs):
+    if expected is None and detected is None:
+        return
+    if expected is None:
+        return
     exp_date = parse_date(expected)
     det_date = parse_date(detected)
     if exp_date is None or det_date is None:
@@ -410,6 +433,10 @@ def _check_date_field(field, expected, detected, conf, bboxes, discrepancies, da
 
 
 def _check_amount_field(field, expected, detected, conf, bboxes, discrepancies, amount_diffs):
+    if expected is None and detected is None:
+        return
+    if expected is None:
+        return
     exp_amt = parse_amount(expected)
     det_amt = parse_amount(detected)
     if exp_amt is None or det_amt is None:
@@ -425,6 +452,12 @@ def _check_amount_field(field, expected, detected, conf, bboxes, discrepancies, 
             )
         )
         return
+    if det_amt >= 100:
+        scaled = det_amt / 100.0
+        diff_scaled = abs(exp_amt - scaled)
+        rel_scaled = diff_scaled / exp_amt if exp_amt else diff_scaled
+        if diff_scaled <= AMOUNT_ABS_WARN or rel_scaled <= AMOUNT_REL_WARN:
+            det_amt = scaled
     diff = abs(exp_amt - det_amt)
     rel = diff / exp_amt if exp_amt else diff
     amount_diffs[field] = {"abs": diff, "rel": rel}
@@ -462,7 +495,9 @@ def _decide_status(discrepancies, confidence_score):
 
     if has_critical:
         return STATUS_ON_CRITICAL
-    if has_warning or confidence_score < CONFIDENCE_REVIEW_THRESHOLD:
+    if has_warning:
+        return "needs_review"
+    if confidence_score is not None and confidence_score < 0.4:
         return "needs_review"
     return "approved"
 
